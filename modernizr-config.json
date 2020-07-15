@@ -1,0 +1,10 @@
+{
+  "options": [
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/forms/placeholder",
+    "test/img/webp",
+    "test/css/scrollbars"
+  ]
+}

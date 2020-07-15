@@ -1,0 +1,14 @@
+$container-lg: 60rem;
+$container-md: 38.75rem;
+$container-sm: 33.75rem;
+
+.container {
+    @include container();
+    @include sm(max-width, #{$container-sm});
+    @include md(max-width, #{$container-md});
+    @include lg(max-width, #{$container-lg});
+  }
+
+.row {
+    @include row-flex();
+}

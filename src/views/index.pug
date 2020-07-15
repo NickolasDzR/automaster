@@ -1,0 +1,15 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+
+block variables
+	- const title = "gulp-pug-starter"
+
+block content
+	+header
+	
+	
+
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

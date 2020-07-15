@@ -1,0 +1,46 @@
+.more {
+    display: flex;
+    &__language {
+        display: flex;
+        margin: {
+            right: rem(19);
+        }
+        &-list {
+            margin: auto 0;
+            align-self: center;
+            display: flex;
+        }
+        &-link {
+            text-decoration: none;
+            margin-right: rem(13);
+            color: $white;
+        }
+    }
+    &__contacts {
+        position: relative;
+        &:before {
+            content: '';
+            display: inline-block;
+            width: rem(1);
+            height: rem(40);
+            position: absolute;
+            left: -2.125rem;
+            background-color: $white;
+        }
+        margin: {
+            left: rem(34);
+        }
+        &-number {
+            color: $white;
+            font: {
+                weight: bold;
+            }
+        }
+        &-direct {
+            color: $white;
+            font: {
+                weight: bold;
+            }
+        }
+    }
+}

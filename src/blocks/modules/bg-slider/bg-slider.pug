@@ -1,0 +1,9 @@
+mixin bg-slider()
+    - const amountSlideBg = 3;
+    - const classes = "bg-slider__slide swiper-slide";
+    section.bg-slider
+        .bg-slider__container.swiper-container
+            .bg-slider__wrapper.swiper-wrapper
+                - for(var i = 1; i <= amountSlideBg; i += 1) {
+                    div(class=classes data-background="header/background/background-" + i)
+                - }

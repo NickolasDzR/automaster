@@ -1,0 +1,13 @@
+.menu {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item:not(:last-child) {
+        margin-right: rem(30);
+    }
+    &__link {
+        text-decoration: none;
+        color: $white;
+    }
+}

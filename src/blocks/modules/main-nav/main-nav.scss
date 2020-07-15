@@ -1,0 +1,11 @@
+.main-nav {
+    &__left {
+        margin-right: auto;
+    }
+    &__right {
+        margin-left: auto;
+    }
+}
+
+@import '../menu/menu';
+@import '../more/more';

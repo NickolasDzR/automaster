@@ -1,0 +1,28 @@
+$sprite: '../img/sprites/sprite.svg#';
+
+$blue:    #2D4255;
+$yellow:  #FFD400;
+$white:   #FFFFFF;
+$grey:    #E6E7E8;
+$light-blue: #005AAB;
+$dark-blue: #172E40;
+$light-grey:#FAFAFA;
+
+$font-family-base:    'Gilroy' , sans-serif;
+$body-bg:   $white;
+$primary-color: $dark-blue;
+
+$h1: 64;
+$h2: 48;
+$h3: 32;
+
+$text-small: 12;
+$text-normal: 16;
+$text-large: 20;
+$text-big: 24;
+$text-bigger: 32;
+
+$border-radius-small: rem(2);
+$border-radius-biggest: rem(50);
+
+$duration: .3s;

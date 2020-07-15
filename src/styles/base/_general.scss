@@ -1,0 +1,107 @@
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 100% $font-family-base;
+    background-color: $body-bg;
+    color: $primary-color;
+    min-width: rem(320);
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.h1-heading {
+    font-size: rem($h1);
+}
+
+.h2-heading {
+    font-size: rem($h2);
+}
+
+.h3-heading {
+    font-size: rem($h3);
+}
+
+.text {
+    font: {
+        size: rem($text-normal);
+        weight: 300;
+    }
+    color: $dark-blue;
+    &_small {
+        font-size: rem($text-small);
+    }
+    &_large {
+        font-size: rem($text-large);
+    }
+    &_big {
+        font-size: rem($text-big);
+    }
+    &_bigger {
+        font-size: rem($text-bigger);
+    }
+    &_color {
+        &_blue {
+            color: $blue;
+        }
+        &_yellow {
+            color: $yellow;
+        }
+        &_white {
+            color: $white;
+        }
+        &_grey {
+            color: $grey;
+        }
+    }
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    color: $white;
+    cursor: pointer;
+    &_theme {
+        &_yellow {
+            background-color: $yellow;
+            color: $light-blue;
+            width: rem(244);
+            padding: {
+                top: rem(12);
+                right: rem(18);
+                bottom: rem(12);
+                left: rem(18);
+            }
+        }
+        &_blue {
+            background-color: $light-blue;
+        }
+        &_transparent {
+            background-color: transparent;
+        }
+    }
+    &__square {
+        display: block;
+        width: rem(10);
+        height: rem(10);
+        position: absolute;
+        left: rem(18);
+        bottom: rem(2);
+        transition: bottom $duration linear;
+        transform: rotate(45deg);
+        &_theme {
+            &_yellow {
+                background-color: $yellow;
+            }
+        }
+    }
+    &:hover {
+        .btn__square {
+            bottom: -0.2875rem;
+            transition: bottom $duration linear;
+        }
+    }
+}
