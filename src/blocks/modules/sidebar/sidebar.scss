@@ -1,0 +1,44 @@
+.sidebar {
+    padding: {
+        top: rem(16);
+        right: rem(11);
+        bottom: rem(16);
+        left: rem(11);
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: rem(80);
+    height: 100vh;
+    background-color: $light-blue;
+    transition: background-color $duration linear;
+    cursor: pointer;
+    &:hover {
+        background-color: $yellow;
+        transition: background-color $duration linear;
+        .logo-bg {
+            transition: fill $duration linear;
+            fill: $light-blue;
+        }
+        .logo-letter {
+            transition: fill $duration linear;
+            fill: $yellow;
+        }
+    }
+    &__wrp {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__title {
+        max-height: rem(50);
+        min-width: rem(200);
+        margin-left: rem(-60);
+        transform: rotate(-90deg);
+        position: relative;
+    }
+    &__icon {
+        position: absolute;
+    }
+}

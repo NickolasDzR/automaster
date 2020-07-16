@@ -1,8 +1,19 @@
 include ../main-nav/main-nav
 include ../bg-slider/bg-slider
 include ../title-slider/title-slider
+include ../pagination/pagination
+include ../sidebar/sidebar
+
+
 mixin header()
-    header
+    header.header
         +bg-slider
-        +main-nav
-        +title-slider
+        +sidebar
+        .header__content
+            +main-nav({
+                class: 'header__main-nav'
+            })
+            +title-slider
+            +pagination({
+                class: 'header__pagination'
+            })

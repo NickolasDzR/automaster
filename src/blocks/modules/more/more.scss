@@ -2,18 +2,19 @@
     display: flex;
     &__language {
         display: flex;
+        align-items: center;
         margin: {
             right: rem(19);
         }
         &-list {
             margin: auto 0;
-            align-self: center;
             display: flex;
         }
         &-link {
             text-decoration: none;
             margin-right: rem(13);
             color: $white;
+            font-size: $text-smallest;
         }
     }
     &__contacts {
@@ -33,12 +34,14 @@
         &-number {
             color: $white;
             font: {
+                size: $text-large;
                 weight: bold;
             }
         }
         &-direct {
             color: $white;
             font: {
+                size: $text-smallest;
                 weight: bold;
             }
         }

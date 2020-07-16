@@ -1,9 +1,11 @@
 .main-nav {
-    &__left {
-        margin-right: auto;
+    &__row {
+        display: flex;
+        justify-content: space-between;
     }
-    &__right {
-        margin-left: auto;
+    &__left {
+        display: flex;
+        align-items: center;
     }
 }
 

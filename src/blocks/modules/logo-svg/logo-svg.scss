@@ -1,0 +1,19 @@
+.logo-svg {
+    width: rem(58);
+    height: rem(65);
+}
+
+.logo-bg {
+    transition: fill $duration linear;
+}
+.logo-letter {
+    transition: fill $duration linear;
+}
+
+#logo-new path {
+    fill: red;  
+}
+
+.blogo-svg-1 {
+    fill: red;
+}

@@ -1,0 +1,43 @@
+.pagination {
+    &__text {
+        font: {
+            size: rem($text-small);
+            weight: 600;
+        }
+        color: $white;
+        &_active {
+            color: $yellow;
+        }
+        margin-bottom: rem(15);
+    }
+    &__row {
+        justify-content: space-between;
+    }
+    &__item {
+        @include col();
+        @include size(4);
+    }
+    &__line {
+        width: 100%;
+        height: 1px;
+        background-color: $white;
+        position: relative;
+        &:before {
+            content: '';
+            width: 0;
+            transition: width ($duration * 3) linear;
+            height: rem(3);
+            background-color: $yellow;
+            position: absolute;
+            bottom: rem(-1);
+            left: 0;
+            right: 0;
+        }
+        &_active {
+            &:before {
+                width: 100%;
+                transition: width (($duration + .2) * 10) linear;
+            }
+        }
+    }
+}

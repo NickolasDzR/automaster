@@ -13,6 +13,15 @@ body {
     margin: 0;
 }
 
+.svg-icon {
+    width: rem(24);
+    height: rem(24);
+    use {
+        fill: $white;
+    }
+}
+
+
 .h1-heading {
     font-size: rem($h1);
 }
@@ -31,7 +40,10 @@ body {
         weight: 300;
     }
     color: $dark-blue;
-    &_small {
+    &_smallest {
+        font-size: rem($text-smallest);
+    }
+    &__small {
         font-size: rem($text-small);
     }
     &_large {

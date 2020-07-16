@@ -1,3 +1,21 @@
+.header {
+    height: 100vh;
+    &__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__main-nav {
+        padding-top: rem(35);
+    }
+    &__pagination {
+        padding-bottom: rem(95);
+    }
+}
+
 @import '../bg-slider/bg-slider';
+@import '../sidebar/sidebar';
 @import '../main-nav/main-nav';
 @import '../title-slider/title-slider';
+@import '../pagination/pagination';

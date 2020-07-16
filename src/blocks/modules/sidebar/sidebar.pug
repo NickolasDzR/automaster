@@ -1,0 +1,11 @@
+include ../logo-svg/logo-svg
+mixin sidebar()
+    .sidebar
+        +logo-svg
+        .sidebar__wrp
+            .sidebar__title
+                p.sidebar__text Каталог товаров
+                +icon({
+                    class: 'svg-icon sidebar__icon',
+                    name: 'grid'
+                })

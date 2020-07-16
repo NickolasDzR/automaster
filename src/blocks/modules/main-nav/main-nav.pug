@@ -1,9 +1,9 @@
 include ../menu/menu
 include ../more/more
-mixin main-nav()
-    .main-nav
+mixin main-nav(value)
+    section.main-nav(class= value ? value.class : '')
         .container
-            .row
+            .row.main-nav__row
                 .main-nav__left
                     +menu
                 .main-nav__right

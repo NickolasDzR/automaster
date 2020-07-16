@@ -1,5 +1,4 @@
 import 'nodelist-foreach-polyfill';
-import Swiper from 'swiper';
 
 const backgroundImageExt = document.querySelectorAll('[data-background]');
 
@@ -16,11 +15,3 @@ if (Modernizr.webp) {
         el.removeAttribute('data-background');
     });
 }
-
-const bgSliderContainer = document.querySelector('.bg-slider__container');
-
-const bg_slider = new Swiper(bgSliderContainer, {
-    touchRation: 0,
-    effect: 'fade',
-    allowTouchMove: false,
-});
