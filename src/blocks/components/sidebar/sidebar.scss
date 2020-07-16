@@ -10,13 +10,11 @@
     left: 0;
     bottom: 0;
     width: rem(80);
-    height: 100vh;
     background-color: $light-blue;
-    transition: background-color $duration linear;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
     &:hover {
-        background-color: $yellow;
-        transition: background-color $duration linear;
         .logo-bg {
             transition: fill $duration linear;
             fill: $light-blue;
@@ -27,18 +25,24 @@
         }
     }
     &__wrp {
-        height: 100%;
-        display: flex;
-        align-items: center;
+        margin: 0 auto;
     }
     &__title {
-        max-height: rem(50);
-        min-width: rem(200);
-        margin-left: rem(-60);
+        margin-left: -1.75rem;
         transform: rotate(-90deg);
         position: relative;
+        white-space: nowrap;
     }
+    &__text {
+        font: {
+            size: rem($text-normal);
+            weight: 600;
+        }
+        color: $white;
+        }
     &__icon {
         position: absolute;
+        top: rem(-2);
+        left: rem(-40);
     }
 }
