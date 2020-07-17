@@ -9,23 +9,36 @@
     top: 0;
     left: 0;
     bottom: 0;
+    z-index: 2;
     width: rem(80);
-    background-color: $light-blue;
+    background: $light-blue;
+    transition: background $duration linear;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    &_active {
+        background: $yellow;
+        transition: background $duration linear;
+    }
     &:hover {
-        .logo-bg {
-            transition: fill $duration linear;
-            fill: $light-blue;
+        .svg-icon_theme_blue {
+            color: $light-blue;
+            use {
+                fill: $yellow;
+            }
         }
-        .logo-letter {
-            transition: fill $duration linear;
-            fill: $yellow;
+        .svg-icon_theme_white {
+            use {
+                fill: $light-blue;
+            }
+        }
+        .sidebar__text {
+            color: $light-blue;
+            transition: color $duration linear;
         }
     }
     &__wrp {
-        margin: 0 auto;
+        margin: auto auto;
     }
     &__title {
         margin-left: -1.75rem;
@@ -39,6 +52,7 @@
             weight: 600;
         }
         color: $white;
+        transition: color $duration linear;
         }
     &__icon {
         position: absolute;

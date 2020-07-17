@@ -10,6 +10,7 @@
     }
 
     &__slide {
+
         &-wrp {
             @include col();
             @include size(8);

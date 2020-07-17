@@ -16,11 +16,37 @@ body {
 .svg-icon {
     width: rem(24);
     height: rem(24);
-    use {
-        fill: $white;
+    transition: color $duration linear;
+    color: $blue;
+    &_theme {
+        &_yellow {
+            use {
+                transition: fill $duration linear;
+                fill: $yellow;
+            }
+        }
+        &_white {
+            use {
+                transition: fill $duration linear;
+                fill: $white;
+            }
+        }
+        &_blue {
+            use {
+                transition: fill $duration linear;
+                fill: $light-blue;
+            }
+        }
     }
 }
 
+.svg-logo {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: rem(-14);
+    color: $yellow;
+}
 
 .h1-heading {
     font-size: rem($h1);

@@ -5,9 +5,11 @@ const TitleSliderContainer = document.querySelector('.title-slider__wrp');
 const paginationItems = document.querySelectorAll('.pagination__line');
 
 const paginationItemInitAimation = () => paginationItems[0].classList.add('pagination__line_active');
+const styleSliderAfterSliderInit = () => TitleSliderContainer.style.overflow = 'visible';
 
 window.onload = () => {
     paginationItemInitAimation();
+    setTimeout(styleSliderAfterSliderInit, 100);
 };
 
 const changeSlide = (i) => {
@@ -35,7 +37,7 @@ const swiperBg = new Swiper(bgSliderContainer, {
 const swiperTitle = new Swiper(TitleSliderContainer, {
     virtualTranslate: false,
     speed: 1000,
-    spaceBetween: 300,
+    spaceBetween: '100%',
     loop: true,
     loopedSlides: 3,
     autoplay: {

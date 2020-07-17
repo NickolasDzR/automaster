@@ -66,6 +66,7 @@
         "stylelint": "^10.0.1",
         "stylelint-order": "^3.0.0",
         "stylelint-selector-bem-pattern": "^2.1.0",
+        "svgxuse": "^1.2.6",
         "swiper": "^6.0.3",
         "webpack": "~4.35.0",
         "webpack-stream": "^5.2.1",

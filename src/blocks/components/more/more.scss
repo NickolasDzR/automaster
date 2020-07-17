@@ -14,7 +14,15 @@
             text-decoration: none;
             margin-right: rem(13);
             color: $white;
+            transition: color $duration linear;
             font-size: $text-smallest;
+            &_active {
+                color: $yellow;
+            }
+            &:hover {
+                color: $yellow;
+                transition: color $duration linear;
+            }
         }
     }
     &__contacts {

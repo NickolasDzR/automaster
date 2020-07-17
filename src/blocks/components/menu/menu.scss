@@ -7,8 +7,46 @@
         margin-right: rem(30);
     }
     &__link {
+        position: relative;
         text-decoration: none;
+        text-transform: uppercase;
         color: $white;
         font-size: rem($text-smallest);
+        padding: {
+            top: 0;
+            right: 0;
+            bottom: rem(10);
+            left: 0;
+        }
+        &:before {
+            content: '';
+            display: inline-block;
+            width: rem(0);
+            transition: width $duration linear;
+            height: rem(1);
+            background-color: $yellow;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        &:hover {
+            &:before {
+            width: rem(29);
+            transition: width $duration linear;
+            }
+        }
+        &_active {
+            position: relative;
+            &:before {
+                content: '';
+                display: inline-block;
+                width: rem(29);
+                height: rem(1);
+                background-color: $yellow;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
     }
 }
