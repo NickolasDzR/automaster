@@ -3,9 +3,13 @@
         display: flex;
         justify-content: space-between;
     }
+    &__right {
+        @include col()
+    }
     &__left {
         display: flex;
         align-items: center;
+        @include col();
     }
 }
 

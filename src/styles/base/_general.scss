@@ -3,6 +3,10 @@ h1, h2, h3, h4, h5, h6, ul {
     padding: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font: 100% $font-family-base;
     background-color: $body-bg;
@@ -41,11 +45,11 @@ body {
 }
 
 .svg-logo {
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    top: rem(-14);
-    color: $yellow;
+    width: auto;
+    height: auto;
+    color: #ffd400;
+    max-width: 100%;
+    margin-top: rem(-16);
 }
 
 .h1-heading {
@@ -121,25 +125,19 @@ body {
             background-color: transparent;
         }
     }
-    &__square {
-        display: block;
-        width: rem(10);
-        height: rem(10);
-        position: absolute;
-        left: rem(18);
-        bottom: rem(2);
-        transition: bottom $duration linear;
-        transform: rotate(45deg);
-        &_theme {
-            &_yellow {
-                background-color: $yellow;
-            }
+}
+
+.square {
+    display: block;
+    width: rem(10);
+    height: rem(10);
+    transform: rotate(45deg);
+    &_theme {
+        &_yellow {
+            background-color: $yellow;
         }
-    }
-    &:hover {
-        .btn__square {
-            bottom: -0.2875rem;
-            transition: bottom $duration linear;
+        &_blue {
+            background-color: $light-blue;
         }
     }
 }

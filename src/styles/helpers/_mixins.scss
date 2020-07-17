@@ -1,14 +1,15 @@
-$container-lg: 60rem;
-$container-md: 38.75rem;
-$container-sm: 33.75rem;
+$container-xl: 75rem; // 1200px
+$container-lg: 57rem; // 912px
+$container-md: 43rem; // 688px
+$container-sm: 31rem; // 496px
 
 .container {
     @include container();
     @include sm(max-width, #{$container-sm});
     @include md(max-width, #{$container-md});
     @include lg(max-width, #{$container-lg});
+    @include xl(max-width, #{$container-xl});
   }
-
 .row {
     @include row-flex();
 }

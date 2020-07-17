@@ -1,13 +1,15 @@
 mixin sidebar()
-    .sidebar
-        +icon({
-            class: 'svg-icon svg-icon_theme_blue svg-logo',
-            name: 'logo'
-        })
+    aside.sidebar
         .sidebar__wrp
-            .sidebar__title
-                p.sidebar__text Каталог товаров
-                +icon({
-                    class: 'svg-icon svg-icon_theme_white sidebar__icon',
-                    name: 'grid'
-                })
+            +icon({
+                class: 'svg-icon svg-icon_theme_blue svg-logo',
+                name: 'logo'
+            })
+            .sidebar__title-wrp
+                .sidebar__title
+                    p.sidebar__text Каталог товаров
+                    +icon({
+                        class: 'svg-icon svg-icon_theme_white sidebar__icon',
+                        name: 'grid'
+                    })
+            .square.square_theme_blue.sidebar__square

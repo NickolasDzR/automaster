@@ -5,11 +5,11 @@ const TitleSliderContainer = document.querySelector('.title-slider__wrp');
 const paginationItems = document.querySelectorAll('.pagination__line');
 
 const paginationItemInitAimation = () => paginationItems[0].classList.add('pagination__line_active');
-const styleSliderAfterSliderInit = () => TitleSliderContainer.style.overflow = 'visible';
+// const styleSliderAfterSliderInit = () => TitleSliderContainer.style.overflow = 'visible';
 
 window.onload = () => {
     paginationItemInitAimation();
-    setTimeout(styleSliderAfterSliderInit, 100);
+    // setTimeout(styleSliderAfterSliderInit, 100);
 };
 
 const changeSlide = (i) => {
@@ -36,13 +36,32 @@ const swiperBg = new Swiper(bgSliderContainer, {
 
 const swiperTitle = new Swiper(TitleSliderContainer, {
     virtualTranslate: false,
-    speed: 1000,
+    setWrapperSize: false,
+    width: '1312',
     spaceBetween: '100%',
+    breakpoints: {
+        1280: {
+            width: '1200',
+        },
+        992: {
+            width: '912',
+        },
+        768: {
+            width: '688',
+        },
+        576: {
+            width: '496',
+        },
+        320: {
+            width: '320',
+        },
+    },
+    speed: 1000,
     loop: true,
     loopedSlides: 3,
-    autoplay: {
-        delay: 4000,
-    },
+    // autoplay: {
+    //     delay: 4000,
+    // },
     thumbs: {
         swiper: swiperBg,
     },

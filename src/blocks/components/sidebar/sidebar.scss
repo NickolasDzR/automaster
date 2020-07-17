@@ -1,24 +1,31 @@
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     padding: {
         top: rem(16);
         right: rem(11);
         bottom: rem(16);
         left: rem(11);
     }
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
     z-index: 2;
     width: rem(80);
     background: $light-blue;
     transition: background $duration linear;
-    display: flex;
-    flex-direction: column;
+    overflow-x: hidden;
     cursor: pointer;
+    &__wrp {
+        width: 100%;
+        height: 100%;
+    }
     &_active {
         background: $yellow;
         transition: background $duration linear;
+        .sidebar__square {
+            right: rem(-12);
+            transition: right $duration linear;
+        }
     }
     &:hover {
         .svg-icon_theme_blue {
@@ -37,14 +44,16 @@
             transition: color $duration linear;
         }
     }
-    &__wrp {
-        margin: auto auto;
-    }
     &__title {
-        margin-left: -1.75rem;
+        margin-left: rem(-39);
         transform: rotate(-90deg);
         position: relative;
         white-space: nowrap;
+        &-wrp {
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+        }
     }
     &__text {
         font: {
@@ -58,5 +67,13 @@
         position: absolute;
         top: rem(-2);
         left: rem(-40);
+    }
+    &__square {
+        position: absolute;
+        bottom: rem(100);
+        right: rem(-29);
+        transition: right $duration linear;
+        width: rem(24);
+        height: rem(24);
     }
 }
