@@ -1,3 +1,4 @@
+include ../../components/hamburger/hamburger
 include ../../components/main-nav/main-nav
 include ../../components/bg-slider/bg-slider
 include ../../components/title-slider/title-slider
@@ -7,6 +8,7 @@ include ../../components/sidebar/sidebar
 
 mixin header()
     header.header
+        +hamburger
         +sidebar
         +bg-slider
         .header__content

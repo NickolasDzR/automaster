@@ -1,5 +1,8 @@
 .pagination {
     &__text {
+        @media (max-width: $break_md) {
+            font-size: rem(12);
+        }
         font: {
             size: rem($text-small);
             weight: 600;
@@ -16,6 +19,7 @@
     &__item {
         @include col();
         @include size(4);
+        @include size-sm(6);
     }
     &__line {
         width: 100%;

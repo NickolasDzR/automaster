@@ -3,15 +3,25 @@
     padding-left: rem(80);
     overflow: hidden;
     &__content {
+        @media (max-width: $break_md) {
+            margin-top: rem(144);
+        }
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
     &__main-nav {
+        @media (max-width: $break_md) {
+            padding: 0;
+            display: none;
+        }
         padding-top: rem(35);
     }
     &__pagination {
+        @media (max-width: $break_md) {
+            padding-bottom: 2.9375rem;
+        }
         padding-bottom: rem(95);
     }
 }

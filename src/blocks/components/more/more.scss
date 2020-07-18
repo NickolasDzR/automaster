@@ -11,11 +11,14 @@
             display: flex;
         }
         &-link {
+            @media (max-width: $break_md) {
+                font-size: rem(10);
+            }
             text-decoration: none;
             margin-right: rem(13);
             color: $white;
             transition: color $duration linear;
-            font-size: $text-smallest;
+            font-size: rem($text-smallest);
             &_active {
                 color: $yellow;
             }
@@ -26,8 +29,17 @@
         }
     }
     &__contacts {
+        @media (max-width: $break_md) {
+            margin-left: rem(28);
+        }
         position: relative;
+        margin: {
+            left: rem(34);
+        }
         &:before {
+            @media (max-width: $break_md) {
+                height: rem(28);
+            }
             content: '';
             display: inline-block;
             width: rem(1);
@@ -36,20 +48,23 @@
             left: -2.125rem;
             background-color: $white;
         }
-        margin: {
-            left: rem(34);
-        }
         &-number {
+            @media (max-width: $break_md) {
+                font-size: rem($text-normal);
+            }
             color: $white;
             font: {
-                size: $text-large;
+                size: rem($text-large);
                 weight: bold;
             }
         }
         &-direct {
+            @media (max-width: $break_md) {
+                font-size: rem(10);
+            }
             color: $white;
             font: {
-                size: $text-smallest;
+                size: rem($text-smallest);
                 weight: bold;
             }
         }

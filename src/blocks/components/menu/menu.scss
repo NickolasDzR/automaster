@@ -4,6 +4,9 @@
         justify-content: space-between;
     }
     &__item:not(:last-child) {
+        @media (max-width: $break_md) {
+            margin-right: 1.275rem;
+        }
         margin-right: rem(30);
     }
     &__link {
@@ -12,6 +15,9 @@
         text-transform: uppercase;
         color: $white;
         font-size: rem($text-smallest);
+        @media (max-width: $break_md) {
+            font-size: rem(10);
+        }
         padding: {
             top: 0;
             right: 0;
