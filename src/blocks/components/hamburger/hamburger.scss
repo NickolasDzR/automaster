@@ -17,12 +17,13 @@ $hamburger-hover-filter       : opacity(50%) !default;
 $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 .hamburger {
-    @media (max-width: $break_sm) {
+    @media (max-width: $break_md) {
       display: inline-block;
     }
     display: none;
     position: fixed;
     right: 0;
+    z-index: 15;
     padding: $hamburger-padding-y $hamburger-padding-x;
     cursor: pointer;
   
@@ -61,7 +62,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
       .hamburger-inner,
       .hamburger-inner::before,
       .hamburger-inner::after {
-        background-color: $hamburger-active-layer-color;
+        background-color: $white;
       }
     }
   }

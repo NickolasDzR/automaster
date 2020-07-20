@@ -1,0 +1,12 @@
+mixin contact(value)
+    .contact(class= value ? value.parentClass : '')
+        .contact__label(class= value ? value.labelClass : '')
+            .contact__image
+                +icon({
+                    class: value.iconClass,
+                    name: value.iconName,
+                })
+            .contact__value
+                p.contact__paragraph #{value.label}
+        .contact__text
+            .contact__data  #{value.text}

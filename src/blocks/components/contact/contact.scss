@@ -1,0 +1,26 @@
+.contact {
+    &__paragraph {
+        font: {
+            size: rem($text-normal);
+            weight: 600;
+        }
+        color: $yellow;
+    }
+    &__data {
+        font: {
+            size: rem($text-normal);
+        }
+        color: $white;
+    }
+    &__label {
+        display: flex;
+        margin: {
+            bottom: rem(10);
+        }
+    }
+    &__icon {
+        margin: {
+            right: rem(14);
+        };
+    }
+}

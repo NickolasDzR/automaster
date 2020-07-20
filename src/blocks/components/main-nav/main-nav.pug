@@ -1,10 +1,12 @@
 include ../menu/menu
 include ../more/more
+include ../info/info
 mixin main-nav(value)
     section.main-nav(class= value ? value.class : '')
-        .container
+        .container(class= value ? value.containerClass : '')
             .row.main-nav__row
                 .main-nav__left
                     +menu
+                    +info
                 .main-nav__right
                     +more

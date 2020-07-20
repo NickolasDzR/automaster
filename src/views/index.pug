@@ -1,11 +1,13 @@
 extends layouts/default
 include helpers/mixins
 include ../blocks/modules/header/header
+include ../blocks/components/modal/modal
 
 block variables
 	- const title = "gulp-pug-starter"
 
 block content
+	+modal
 	+header
 	
 	

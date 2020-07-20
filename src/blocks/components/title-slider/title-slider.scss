@@ -1,35 +1,35 @@
 .title-slider {
+    @media (max-width: $break_md) {
+        margin: auto 0;
+    }
     &__heading {
-        @media (max-width: $break_xl) {
-            font-size: rem(48);
-        }
-        @media (max-width: $break_lg) {
-            font-size: rem(35);
+        @media (max-width: $break_xs) {
+            line-height: rem(34);
         }
         color: $yellow;
         margin-bottom: rem(18);
     }
 
     &__text {
-        @media (max-width: $break_lg) {
-            font-size: rem(14.5);
-            margin-bottom: rem(32);
+        @media (max-width: $break_xl) {
+            font-size: fontSize($text-large, $text-normal)
+        }
+        @media (max-width: $break_xs) {
+            font-size: rem($text-normal);
+        }
+        font: {
+            size: rem($text-large);
         }
         color: $white;
         margin-bottom: rem(56);
     }
-    &__wrp {
-        overflow: visible;
-        .swiper-wrapper {
-            overflow: hidden;
-        }
-    }
-
     &__slide {
+        padding-bottom: rem(10);
         &-wrp {
             @include col();
             @include size(8);
             @include size-md(10);
+            @include size-sm(12);
         }
     }
     &__square {
@@ -39,6 +39,9 @@
         transition: bottom $duration linear;
     }
     &__btn {
+        @media (max-width: $break_md) {
+            display: none;
+        }
         &:hover {
             .title-slider__square {
                 bottom: rem(-5);

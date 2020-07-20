@@ -44,16 +44,14 @@ body {
     }
 }
 
-.svg-logo {
-    width: auto;
-    height: auto;
-    color: #ffd400;
-    max-width: 100%;
-    margin-top: rem(-16);
-}
-
 .h1-heading {
-    font-size: rem($h1);
+    @media (max-width: $break_xl) {
+        font-size: fontSize(64, 28);
+    }
+    @media (max-width: $break_xs) {
+        font-size: rem(28);
+    }
+    font-size: rem(64);
 }
 
 .h2-heading {

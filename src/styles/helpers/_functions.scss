@@ -1,3 +1,9 @@
 @function rem($px) {
     @return ($px / 16) +rem;
 }
+
+@function fontSize($maxPx, $minPx) {
+    $m: ($maxPx - $minPx) / ($containerMax - $containerMin);
+    $b: rem($minPx - ($m * $containerMin));
+    @return calc(#{$m} * 100vw + #{$b});
+}

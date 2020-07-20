@@ -1,0 +1,17 @@
+include ../contact/contact
+mixin info()
+    .info
+        +contact({
+            parentClass: 'info__contact',
+            iconClass: "svg-icon svg-icon_theme_white contact__icon",
+            iconName: "phone",
+            label: "Номер телефона",
+            text: "99 777 55 66  —  71 256 55 66",
+        })
+        +contact({
+            parentClass: 'info__contact',
+            iconClass: "svg-icon svg-icon_theme_white contact__icon",
+            iconName: "mail",
+            label: "Email адрес",
+            text: "info@automaster.uz",
+        })
