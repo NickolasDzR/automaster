@@ -1,0 +1,20 @@
+include ../../components/odds-item/odds-item
+mixin advantages(value)
+    section.advantages
+        .container
+            .row
+                .advantages__left
+                    .advantages__title  Основа нашего подхода. Глубокое понимание технологи- ческих особенностей предлагаемых нами стендов и приборов
+                    .advantages__text Мы понимаем, что лучший залог успеха нашей компании— это успех работы наших клиентов. Поэтому мы гаран-тируем, что результатом нашего коммерческого предложения будет не то оборудование, которое проще привезти и продать, а то, которое больше подходит именно под ваши задачи.
+                .advantages__right
+                    ul.advantages__list
+                                - const iconName = ['gear', 'worker', 'notebook', 'building', 'wheels', 'gear',]
+                                - const oddsItemText = ['Опыт разработки диагностического оборудования', 'Участие в обучении и подготовке специалистов СТО', 'Регулярные обучения у производителей оборудования', 'Регулярное участие в технических конференциях', 'Опыт работы на дилерских и независимых СТО', 'Опыт разработки диагностического оборудования']
+                                    - for (let i = 0; i < oddsItemText.length; i += 1) {
+                                        li.advantages__item
+                                            +odds-item({
+                                                name: iconName[i],
+                                                class: 'svg-icon_theme_blue advantages__icon'}, 
+                                                oddsItemText[i],
+                                                'advantages__odds-item')
+                                    - }

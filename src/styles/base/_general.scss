@@ -17,6 +17,15 @@ body {
     margin: 0;
 }
 
+.site-container {
+    @media (max-width: $break_md) {
+        padding: {
+            left: rem(40);
+        };
+    }
+    padding-left: rem(80);
+}
+
 .svg-icon {
     width: rem(24);
     height: rem(24);

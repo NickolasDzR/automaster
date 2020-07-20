@@ -1,0 +1,11 @@
+.odds-item {
+    &__text {
+        @media (max-width: $break_xs) {
+            font-weight: normal;
+        }
+        font: {
+            size: rem($text-smallest);
+            weight: 600;
+        }
+    }
+}

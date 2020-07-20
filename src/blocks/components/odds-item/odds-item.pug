@@ -1,0 +1,7 @@
+mixin odds-item(value, text, parentClass)
+    .odds-item(class= parentClass ? parentClass : '')
+        +icon({
+            class: value.class,
+            name: value.name,
+        })
+        p.odds-item__text #{text}

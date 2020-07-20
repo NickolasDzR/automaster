@@ -1,11 +1,5 @@
 .header {
-    @media (max-width: $break_md) {
-        padding: {
-            left: rem(40);
-        };
-    }
     height: 100vh;
-    padding-left: rem(80);
     overflow: hidden;
     &__content {
         @media (max-width: $break_md) {
