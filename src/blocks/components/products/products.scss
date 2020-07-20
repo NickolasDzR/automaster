@@ -1,0 +1,120 @@
+.products {
+    @media (max-width: $break_sm) {
+        padding: {
+            top: rem(49);
+            bottom: rem(41);
+        }
+    }
+    padding: {
+        top: rem(98);
+        bottom: rem(56);
+    }
+    background: $light-blue;
+    &__title {
+        @media (max-width: $break_sm) {
+            flex-wrap: wrap;
+        }
+        display: flex;
+        justify-content: space-between;
+        margin: {
+            bottom: rem(45);
+        };
+    }
+    &__heading {
+        @media (max-width: $break_sm) {
+            margin: {
+                bottom: rem(16);
+            }
+        }
+        @include col();
+        @include size(5);
+        @include size-md(6);
+        @include size-sm(12);
+        margin-top: rem(-10);
+        color: $white;
+    }
+    &__amount {
+        @include col();
+        @include size(5);
+        @include size-md(6);
+        @include size-sm(12);
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    &__number {
+        @media (max-width: $break_xl) {
+            font-size: fontSize(96, 45.4151);
+        }
+        @media (max-width: $break_xs) {
+            font-size: rem(45.4151);
+        }
+        @media (max-width: $break_sm) {
+            line-height: inherit;
+            margin: {
+                right: rem(12.52);
+            }
+        }
+        font: {
+            size: rem(96);
+            weight: 900;
+        }
+        line-height: rem(76);
+        color: $yellow;
+        margin-right: rem(32);
+    }
+    &__text {
+        @media (max-width: $break_sm) {
+            padding: {
+                top: rem(10);
+            };
+        }
+        color: $yellow;
+    }
+    &__top {
+        @media (max-width: $break_xl) {
+            font-size: fontSize($text-big, $text-smallest);
+        }
+        @media (max-width: $break_xs) {
+            font-size: rem($text-smallest);
+        }
+        @media (max-width: $break_sm) {
+            margin: {
+                bottom: rem(2);
+            }
+        }
+        font: {
+            size: rem($text-big);
+        }
+        margin: {
+            bottom: rem(8);
+        };
+    }
+    &__bottom {
+        @media (max-width: $break_xl) {
+            font-size: fontSize($text-normal, 8);
+        }
+        @media (max-width: $break_xs) {
+            font-size: rem(8);
+        }
+        font: {
+            size: rem($text-normal);
+        }
+    }
+    &__icon {
+        width: rem(56);
+        height: rem(56);
+        min-width: rem(56);
+        min-height: rem(56);
+    }
+    &__items {
+        width: 100%;
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        .swiper-slide {
+            @include col();
+            @include size(3);
+        }
+    }
+}

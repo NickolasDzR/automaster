@@ -64,7 +64,13 @@ body {
 }
 
 .h2-heading {
-    font-size: rem($h2);
+    @media (max-width: $break_xl) {
+        font-size: fontSize(48, 32);
+    }
+    @media (max-width: $break_xs) {
+        font-size: rem(32);
+    }
+    font-size: rem(48);
 }
 
 .h3-heading {

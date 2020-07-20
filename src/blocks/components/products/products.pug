@@ -1,0 +1,27 @@
+include ../../components/offer/offer
+mixin products()
+    section.products
+        .container
+            .row
+                .products__title
+                    .products__heading.h2-heading Продукция, которой мы вас радуем
+                    .products__amount
+                        p.products__number 246
+                        .products__text
+                            .products__top Позиций
+                            .products__bottom На данный момент в наших руках, для вашего пользования
+                .products__items
+                    .products__slider.swiper-container
+                        .products__wrapper.swiper-wrapper
+                            - const iconName = ['lift', 'speed', 'oil', 'cabel', 'blowtorch', 'lift', 'pressure', 'wrench', 'blowtorch', 'jack', 'carcass', 'tire']
+                            - const offerText = 'Подъёмные оборудования'
+                            - const parentClass = 'products__offer'
+                            - for (let i = 0; i < iconName.length; i += 1) {
+                                .swiper-slide
+                                    +offer({
+                                        name: 'menu-' + iconName[i], 
+                                        class: 'svg-icon svg-icon_theme_yellow products__icon'
+                                        }, 
+                                        offerText,
+                                        parentClass)
+                            - }

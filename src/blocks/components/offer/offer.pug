@@ -1,0 +1,7 @@
+mixin offer(value, text, parentClass)
+    .offer(class= parentClass ? parentClass : '')
+        +icon({
+            class: value.class,
+            name: value.name
+        })
+        .offer__text #{text}
