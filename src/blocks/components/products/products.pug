@@ -10,18 +10,26 @@ mixin products()
                         .products__text
                             .products__top Позиций
                             .products__bottom На данный момент в наших руках, для вашего пользования
-                .products__items
-                    .products__slider.swiper-container
-                        .products__wrapper.swiper-wrapper
-                            - const iconName = ['lift', 'speed', 'oil', 'cabel', 'blowtorch', 'lift', 'pressure', 'wrench', 'blowtorch', 'jack', 'carcass', 'tire']
-                            - const offerText = 'Подъёмные оборудования'
-                            - const parentClass = 'products__offer'
-                            - for (let i = 0; i < iconName.length; i += 1) {
-                                .swiper-slide
-                                    +offer({
+            .products__items
+                .products__slider.swiper-container
+                    .products__wrapper.swiper-wrapper
+                        - const iconName = ['lift', 'speed', 'oil', 'cabel', 'blowtorch', 'lift', 'pressure', 'wrench', 'blowtorch', 'jack', 'carcass', 'tire']
+                        - const offerText = 'Подъёмные оборудования'
+                        - const parentClass = 'products__offer'
+                        - for (let i = 0; i < iconName.length; i += 1) {
+                            .products__slide.swiper-slide
+                                +offer({
                                         name: 'menu-' + iconName[i], 
-                                        class: 'svg-icon svg-icon_theme_yellow products__icon'
-                                        }, 
-                                        offerText,
-                                        parentClass)
-                            - }
+                                        class: 'svg-icon svg-icon_theme_yellow offer__icon'
+                                    }, 
+                                    offerText,
+                                    {
+                                        path: 'offer',
+                                        name: i + 1,
+                                        imgType: 'png',
+                                        sourceType: 'webp',
+                                        class: 'offer__picture',
+                                    },
+                                    parentClass)
+                        - }
+                    .products__pagination.swiper-pagination

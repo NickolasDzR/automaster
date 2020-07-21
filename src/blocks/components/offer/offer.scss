@@ -1,0 +1,68 @@
+.offer {
+    padding: {
+        top: rem(32);
+        right: rem(32);
+        bottom: rem(39);
+        left: rem(32)
+    }
+    cursor: pointer;
+    overflow: hidden;
+    transition: background $duration linear;
+    position: relative;
+    &__text {
+        @media (max-width: $break_xl) {
+            font-size: fontSize($text-big, $text-normal);
+        }
+        @media (max-width: $break_xs) {
+            font-size: rem($text-normal);
+        }
+        font: {
+            size: rem($text-big);
+            weight: 600;
+        };
+        color: $white;
+        transition: transform .4s ease-in-out;
+    }
+    &__icon {
+        width: rem(56);
+        height: rem(56);
+        min-width: rem(56);
+        min-height: rem(56);
+        margin: {
+            bottom: rem(16.5);
+        }
+        transition: transform $duration linear;
+    }
+    &__picture {
+        position: absolute;
+        bottom: -30px;
+        visibility: hidden;
+        opacity: 0;
+        right: rem(-40);
+        transition: {
+            property: right, opacity, visibility;
+            delay: 0s, 0s, $duration;
+            timing-function: linear;
+            duration: $duration;
+        }
+    }
+    &:hover {
+        background: $yellow;
+        transition: background $duration linear;
+        transition-delay: .3s;
+        .offer__icon {
+            transform: translate(0, -100px);
+            transition: transform $duration ease-in-out;
+        }
+        .offer__text {
+            transform: translate(0, -200px);
+            transition: transform .4s ease-in-out;
+        }
+        .offer__picture {
+            right: 0;
+            visibility: visible;
+            opacity: 1;
+            transition: all $duration linear;
+        }
+    }
+}

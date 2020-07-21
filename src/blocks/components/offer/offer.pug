@@ -1,7 +1,15 @@
-mixin offer(value, text, parentClass)
-    .offer(class= parentClass ? parentClass : '')
+mixin offer(value, text, picture, parentClass = '')
+    .offer(class= parentClass)
         +icon({
             class: value.class,
             name: value.name
         })
         .offer__text #{text}
+        .offer__interior
+            +picture({
+                path: picture.path,
+                name: picture.name,
+                imgType: picture.imgType,
+                sourceType: picture.sourceType,
+                ImgClass: picture.class,
+            })
