@@ -6,3 +6,4 @@ import "../../blocks/components/bg-slider/bg-slider";
 import "../../blocks/components/title-slider/title-slider";
 import "../../blocks/components/pagination/pagination";
 import "../../blocks/components/products/products";
+import "../../blocks/components/solutions/solutions";

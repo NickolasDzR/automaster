@@ -1,0 +1,14 @@
+mixin product-card(pic, value)
+    .product-card(class= value.parentClass ? value.parentClass : '')
+        .product-card__text
+            p.product-card__title #{value.text}
+            p.product-card__subtitle #{value.subText}
+        .product-card__content
+            +picture({
+                path: pic.path,
+                name: pic.name,
+                imgType: pic.imgType,
+                sourceType: pic.sourceType,
+                ImgClass: pic.ImgClass
+            })
+            a.btn.btn_theme_transparent.product-card__btn(href="#") #{value.btnText}

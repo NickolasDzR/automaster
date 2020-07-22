@@ -4,12 +4,25 @@ $container-md: 43rem; // 688px
 $container-sm: 31rem; // 496px
 
 .container {
-    @include container();
-    @include sm(max-width, #{$container-sm});
-    @include md(max-width, #{$container-md});
-    @include lg(max-width, #{$container-lg});
-    @include xl(max-width, #{$container-xl});
-  }
+  @include container();
+  @include sm(max-width, #{$container-sm});
+  @include md(max-width, #{$container-md});
+  @include lg(max-width, #{$container-lg});
+  @include xl(max-width, #{$container-xl});
+}
+
 .row {
-    @include row-flex();
+  @include row-flex();
+}
+
+@mixin trans($prop, $timing-function, $dur) {
+  transition: {
+    property: $prop;
+    @if $dur {
+      duration: $dur;
+    } @else {
+      duration: $duration;
+    }
+    timing-function: $timing-function;
+  }
 }

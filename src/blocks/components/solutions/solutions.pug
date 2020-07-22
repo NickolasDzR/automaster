@@ -1,0 +1,29 @@
+include ../../components/product-card/product-card
+mixin solutions()
+    section.solutions
+        .container
+            .row.solutions__row
+                .solutions__title
+                    h2.h2-heading.solutions__heading Готовые решения
+            .solutions__content
+                .solutions__container.swiper-container
+                    .solutions__wrapper.swiper-wrapper
+                        - const pictureNum = 4;
+                        - const text = ['Premium', 'Electro', 'Standart', 'Premium lux']
+                        - const subText = ['Set of tire equipment on the basis of durable machines of Italian production. Precise work with all types of wheels. High resource machines.', 'Set of tire equipment on the basis of durable machines of Italian production. Precise work with all types of wheels. ', 'Set of tire equipment on the basis of durable machines of Italian production. Precise work with all types of wheels. High resource machines.', 'Set of tire equipment on the basis of durable machines of Italian production. Precise work with all types of wheels. High resource machines.']
+                        - for (let i = 0; i < pictureNum; i += 1) {
+                            .solutions__slide.swiper-slide
+                                +product-card({
+                                    path: 'product-card',
+                                    name: i,
+                                    imgType: 'png',
+                                    sourceType: 'webp',
+                                    ImgClass: 'solutions__img',
+                                },
+                                {
+                                    text: text[i],
+                                    subText: subText[i],
+                                    btnText: 'Подробнее',
+                                    parentClass: 'solutions__product-card'
+                                })
+                        - }

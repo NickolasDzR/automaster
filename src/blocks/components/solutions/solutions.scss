@@ -1,0 +1,25 @@
+.solutions {
+    padding-top: rem(99);
+    padding-bottom: rem(117);
+    &__row {
+        margin-bottom: rem(45);
+    }
+    &__heading {
+        color: $light-blue;
+    }
+    &__title {
+        width: 100%;
+    }
+    &__content {
+        margin-left: rem(-15);
+        margin-right: rem(-15);
+    }
+    &__slide {
+        display: flex;
+        height: auto;
+    }
+    &__img {
+        position: relative;
+        left: rem(-30);
+    }
+}

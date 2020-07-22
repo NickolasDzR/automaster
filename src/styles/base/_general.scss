@@ -119,6 +119,7 @@ body {
     display: inline-block;
     color: $white;
     cursor: pointer;
+    text-decoration: none;
     &_theme {
         &_yellow {
             background-color: $yellow;
