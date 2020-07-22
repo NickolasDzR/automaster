@@ -6,22 +6,40 @@
         left: rem(32)
     }
     cursor: pointer;
-    overflow: hidden;
     transition: background $duration linear;
     position: relative;
     &__text {
+        position: relative;
+        top: 0;
+        transition: top $duration linear;
+    }
+    &__title {
         @media (max-width: $break_xl) {
             font-size: fontSize($text-big, $text-normal);
         }
-        @media (max-width: $break_xs) {
-            font-size: rem($text-normal);
-        }
+        margin-bottom: rem(6);
         font: {
             size: rem($text-big);
             weight: 600;
         };
         color: $white;
-        transition: transform .4s ease-in-out;
+        transition: color $duration linear;
+    }
+    &__subtitle {
+        @media (max-width: $break_xl) {
+            font-size: fontSize(17, $text-smallest);
+        }
+        font {
+            size: rem(17);
+        }
+        visibility: hidden;
+        opacity: 0;
+        transition: {
+            property: visible, opacity;
+            duration: $duration;
+            timing-function: linear;
+        }
+        color: $white;
     }
     &__icon {
         width: rem(56);
@@ -31,19 +49,22 @@
         margin: {
             bottom: rem(16.5);
         }
-        transition: transform $duration linear;
+        transition: {
+            property: opacity, visibility;
+            duration: $duration;
+            timing-function: linear;
+        };
     }
     &__picture {
         position: absolute;
-        bottom: -30px;
-        visibility: hidden;
         opacity: 0;
         right: rem(-40);
+        visibility: hidden;
+        bottom: -30px;
         transition: {
             property: right, opacity, visibility;
-            delay: 0s, 0s, $duration;
-            timing-function: linear;
             duration: $duration;
+            timing-function: linear;
         }
     }
     &:hover {
@@ -51,18 +72,46 @@
         transition: background $duration linear;
         transition-delay: .3s;
         .offer__icon {
-            transform: translate(0, -100px);
-            transition: transform $duration ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            transition: {
+                property: opacity, visibility;
+                duration: $duration;
+                timing-function: linear;
+            };
         }
         .offer__text {
-            transform: translate(0, -200px);
-            transition: transform .4s ease-in-out;
+            $iconWidth: rem(56);
+            $iconMarginBottom: rem(16.5);
+            top: calc(-#{$iconWidth} + -#{$iconMarginBottom});
+            transition: top $duration ease-in-out;
+        }
+        .offer__title {
+            color: $light-blue;
+            transition: {
+                property: color;
+                duration: $duration;
+                timing-function: linear;
+            }
+        }
+        .offer__subtitle {
+            visibility: visible;
+            opacity: 1;
+            transition: {
+                property: visible, opacity;
+                duration: $duration;
+                timing-function: linear;
+            }
         }
         .offer__picture {
             right: 0;
-            visibility: visible;
             opacity: 1;
+            visibility: visible;
             transition: all $duration linear;
         }
     }
+}
+
+.products__slide {
+    order: 0 !important;
 }

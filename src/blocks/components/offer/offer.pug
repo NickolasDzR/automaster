@@ -4,7 +4,9 @@ mixin offer(value, text, picture, parentClass = '')
             class: value.class,
             name: value.name
         })
-        .offer__text #{text}
+        .offer__text 
+            p.offer__title #{text}
+            p.offer__subtitle 24 позиций
         .offer__interior
             +picture({
                 path: picture.path,
