@@ -1,15 +1,7 @@
 .advantages {
     background: $white;
-    padding: {
-        top: rem(144);
-        bottom: rem(158);
-    }
-    @media (max-width: $break_sm) {
-        padding: {
-            top: rem(36.86);
-            bottom: rem(56.58);
-        }
-    }
+    @include padding('top', 'section');
+    @include padding('bottom', 'section');
     &__left {
         @media (max-width: $break_lg) {
             @include shift-padding-right(0);

@@ -1,0 +1,14 @@
+mixin form(value)
+    form.form(class=value.parentClass ? value.parentClass : '')
+        each item in value.label
+            +label({
+                attr: item.attr,
+                data: item.data,
+                type: item.type,
+                boxClass: item.boxClass,
+            })
+        if value.btn
+            +btn({
+            class: value.btn.class,
+            text: value.btn.text
+            })

@@ -1,3 +1,4 @@
+include ../btn/btn
 mixin title-slider()
     section.title-slider
         .container
@@ -8,17 +9,26 @@ mixin title-slider()
                             .title-slider__slide-wrp
                                 h1.title-slider__heading.h1-heading  Новое поступление шиномонтажных станков
                                 p.title-slider__text Автоматический ввод трех  параметров, LCD монитор,  мультиоператор, aludata, 220В
-                                a.btn.btn_theme_yellow.text_smallest.title-slider__btn Подробнее
+                                +btn({
+                                    class: 'btn btn_theme_yellow text_smallest title-slider__btn',
+                                    text: 'Подробнее'
+                                })
                                     .square.square_theme_yellow.title-slider__square
                         .title-slider__slide.swiper-slide
                             .title-slider__slide-wrp
                                 h1.title-slider__heading.h1-heading  Квартирный вопрос решен на всегда, ура
                                 p.title-slider__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatem!
-                                a.btn.btn_theme_yellow.text_smallest.title-slider__btn Подробнее
+                                +btn({
+                                    class: 'btn.btn_theme_yellow.text_smallest.title-slider__btn',
+                                    text: 'Подробнее'
+                                })
                                     .square.square_theme_yellow.title-slider__square
                         .title-slider__slide.swiper-slide
                             .title-slider__slide-wrp
                                 h1.title-slider__heading.h1-heading  Ваше будущее должно быть в ваших руках
                                 p.title-slider__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, blanditiis consequatur?
-                                a.btn.btn_theme_yellow.text_smallest.title-slider__btn Подробнее
+                                +btn({
+                                    class: 'btn.btn_theme_yellow.text_smallest.title-slider__btn',
+                                    text: 'Подробнее'
+                                })
                                     .square.square_theme_yellow.title-slider__square

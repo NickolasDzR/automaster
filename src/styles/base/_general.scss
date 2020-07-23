@@ -86,7 +86,7 @@ body {
     &_smallest {
         font-size: rem($text-smallest);
     }
-    &__small {
+    &_small {
         font-size: rem($text-small);
     }
     &_large {
@@ -101,6 +101,9 @@ body {
     &_color {
         &_blue {
             color: $blue;
+        }
+        &_light-blue {
+            color: $light-blue;
         }
         &_yellow {
             color: $yellow;

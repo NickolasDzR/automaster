@@ -1,0 +1,43 @@
+.btn {
+    font-family: $font-family-base;
+    position: relative;
+    display: inline-block;
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    &_theme {
+        &_yellow {
+            background-color: $yellow;
+            color: $light-blue;
+            width: rem(244);
+            padding: {
+                top: rem(12);
+                right: rem(18);
+                bottom: rem(12);
+                left: rem(18);
+            }
+        }
+        &_blue {
+            background-color: $light-blue;
+        }
+        &_transparent {
+            background-color: transparent;
+        }
+    }
+    &_icon {
+        &_send {
+            &:after {
+                content: '';
+                display: inline-block;
+                background-image: url(#{$sprite}send-arrow);
+                background-repeat: no-repeat;
+                position: absolute;
+                left: rem(-20);
+                bottom: 0;
+                width: rem(17);
+                height: rem(17);
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+mixin btn(value)
+    if  attr === false
+        a.btn(class= value.class ? value.class : '', href= value.href ? value.href : '') #{value.text}
+    else
+        button.btn(class= value.class ? value.class : '') #{value.text}

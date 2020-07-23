@@ -1,4 +1,8 @@
 .pagination {
+    @media (max-width: $break_md) {
+        margin-bottom: 2.9375rem;
+    }
+    margin-bottom: rem(95);
     &__text {
         @media (max-width: $break_sm) {
             font-size: rem($text-small);

@@ -1,0 +1,75 @@
+.label {
+    width: 100%;
+    padding: 0 rem(15);
+    @include sm(padding, 0);
+    position: relative;
+    @include lg(width, 100%);
+    &:not(:last-child) {
+        margin-bottom: rem(45);
+    }
+
+    &__input {
+        width: 100%;
+        font-weight: 600;
+        font-size: rem(16);
+        color: $white;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #ECEFF1;
+        padding: rem(18) rem(2);
+        outline: none;
+        line-height: 0.9;
+        overflow: hidden;
+        position: relative;
+        min-height: rem(50);
+
+        &::-webkit-resizer {
+            display: none;
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+
+        &:before {
+            content: attr(data-title);
+            display: inline-block;
+            position: absolute;
+            top: 0.925rem;
+            @include sm(top, 1.425rem);
+            left: 0.025rem;
+            color: $white;
+            transition: all .2s linear;
+            pointer-events: none;
+            @include sm(font-size, rem(14));
+        }
+        &_textarea {
+            &:after {
+                content: '';
+                background-image: url(#{$sprite}triangle);
+                width: rem(10);
+                height: rem(10);
+                color: $white;
+                font-family: 'icomoon' !important;
+                font-size: 12px;
+                opacity: .4;
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__title.active:before {
+        top: -0.3rem;
+        @include sm(top, rem(-0.8));
+        left: 0.125rem;
+        font-size: rem(12);
+        @include sm(font-size, rem(10));
+        transition: all .2s ease-out;
+        pointer-events: none;
+    }
+}

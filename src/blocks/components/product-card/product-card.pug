@@ -11,4 +11,7 @@ mixin product-card(pic, value)
                 sourceType: pic.sourceType,
                 ImgClass: pic.ImgClass
             })
-            a.btn.btn_theme_transparent.product-card__btn(href="#") #{value.btnText}
+            +btn({
+                class: 'btn_theme_transparent product-card__btn',
+                text: value.btnText,
+            })

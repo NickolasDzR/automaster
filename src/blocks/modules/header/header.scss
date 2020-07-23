@@ -12,12 +12,6 @@
         justify-content: space-between;
         padding-top: rem(37);
     }
-    &__pagination {
-        @media (max-width: $break_md) {
-            padding-bottom: 2.9375rem;
-        }
-        padding-bottom: rem(95);
-    }
     &__container {
         height: 100%;
     }

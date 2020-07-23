@@ -1,14 +1,7 @@
 .products {
-    @media (max-width: $break_sm) {
-        padding: {
-            top: rem(49);
-            bottom: rem(41);
-        }
-    }
-    padding: {
-        top: rem(98);
-        bottom: rem(56);
-    }
+    @include padding('top', 'section');
+    @include padding('bottom', 'section');
+
     background: $light-blue;
     &__title {
         @media (max-width: $break_sm) {
@@ -16,9 +9,7 @@
         }
         display: flex;
         justify-content: space-between;
-        margin: {
-            bottom: rem(45);
-        };
+        @include margin('bottom', 'heading');
     }
     &__heading {
         @media (max-width: $break_sm) {
@@ -31,7 +22,6 @@
         @include size-xl(6);
         @include size-sm(12);
         margin-top: rem(-10);
-        color: $white;
     }
     &__amount {
         @media (max-width: $break_lg) {

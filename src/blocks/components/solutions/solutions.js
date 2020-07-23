@@ -5,7 +5,6 @@ const solutionsContainer = document.querySelector('.solutions__container');
 const solutionsSlider = new Swiper(solutionsContainer, {
     spaceBetween: 30,
     slidesPerView: 4,
-    // slidesPerColumn: 4,
     slidesPerColumnFill: 'row',
     breakpoints: {
         992: {
@@ -21,8 +20,7 @@ const solutionsSlider = new Swiper(solutionsContainer, {
         320: {
             slidesPerView: 1,
             allowTouchMove: true,
+            spaceBetween: 15,
         }
     }
-})
-
-// solutionsSlider.destroy();
+});

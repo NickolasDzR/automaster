@@ -7,3 +7,4 @@ import "../../blocks/components/title-slider/title-slider";
 import "../../blocks/components/pagination/pagination";
 import "../../blocks/components/products/products";
 import "../../blocks/components/solutions/solutions";
+import "../../blocks/components/label/label";

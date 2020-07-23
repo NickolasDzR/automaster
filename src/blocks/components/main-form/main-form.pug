@@ -1,0 +1,29 @@
+include ../label/label
+include ../form/form
+mixin main-form()
+    section.main-form
+        .container
+            .row
+                .main-form__wrapper
+                    .main-form__heading.h2-heading.text_color_white  Хотите связаться с нами?
+                    .main-form__content
+                        .main-form__left
+                                +contact({
+                                    parentClass: 'contact_icon_top main-form__contact',
+                                    iconClass: "svg-icon svg-icon_theme_white contact__icon",
+                                    iconName: "phone",
+                                    label: "Номер телефона",
+                                    text: "99 777 55 66  —  71 256 55 66",
+                                })
+                                +contact({
+                                    parentClass: 'contact_icon_top main-form__contact',
+                                    iconClass: "svg-icon svg-icon_theme_white contact__icon",
+                                    iconName: "mail",
+                                    label: "Email адрес",
+                                    text: "info@automaster.uz",
+                                })
+                        .main-form__right
+                            .main-form__right-wrapper
+                                - const formLabel = [{data: 'Полное имя', type: 'text', boxClass: 'main-form__col'}, {data: 'Email', type: 'text',boxClass: 'main-form__col'}, {attr: true, data: 'Текст обращения', type: 'text',}]
+                                - const btn = {class: 'btn_theme_transparent btn_icon_send text main-form__btn', text: 'Отправить сообщение', attr: true}
+                                +form({parentClass: 'main-form__form', label: formLabel, btn: btn})

@@ -1,0 +1,53 @@
+.main-form {
+    &__wrapper {
+        @include padding('top', 'section');
+        @include padding('bottom', 'section');
+        background: $light-blue;
+        @include col();
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__heading {
+        font-weight: 600;
+        @include margin('bottom', 'heading');
+        @include col();
+        @include size(12);
+        @include shift-padding-left(1);
+    }
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__left {
+        @include col();
+        @include size(5);
+        @include shift-padding-left(1);
+    }
+    &__right {
+        @include col();
+        @include size(7);
+        padding-left: rem(60);
+    }
+    &__right-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem(45);
+    }
+    &__contact + &__contact {
+        margin-top: rem(69);
+    }
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__col {
+        width: 50%;
+    }
+    &__btn {
+        margin-left: rem(35);
+    }
+}
