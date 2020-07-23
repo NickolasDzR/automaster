@@ -1,6 +1,7 @@
 .header {
     height: 100vh;
-    overflow: hidden;
+    min-height: rem(300);
+    overflow-x: hidden;
     &__content {
         @media (max-width: $break_md) {
             position: relative;
@@ -14,5 +15,16 @@
     }
     &__container {
         height: 100%;
+    }
+    &__main-nav {
+        @include margin('bottom', 'heading');
+    }
+    &__title-slider{
+        margin-top: auto;
+        @include margin('bottom', 'heading');
+    }
+    &__pagination {
+        margin-top: auto;
+        @include margin('bottom', 'heading');
     }
 }

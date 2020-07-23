@@ -1,5 +1,11 @@
 .main-form {
+    @include padding('bottom', 'section');
     &__wrapper {
+        @media (max-width: $break_sm) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        position: relative;
         @include padding('top', 'section');
         @include padding('bottom', 'section');
         background: $light-blue;
@@ -9,6 +15,10 @@
         justify-content: center;
     }
     &__heading {
+        @media (max-width: $break_sm) {
+            padding-left: 0;
+            margin-bottom: rem(47);
+        }
         font-weight: 600;
         @include margin('bottom', 'heading');
         @include col();
@@ -21,13 +31,24 @@
         flex-wrap: wrap;
     }
     &__left {
+        @media (max-width: $break_sm) {
+            padding-left: 0;
+            margin-bottom: rem(37);
+        }
         @include col();
         @include size(5);
+        @include size-lg(6);
+        @include size-sm(12);
         @include shift-padding-left(1);
     }
     &__right {
+        @media (max-width: $break-lg) {
+            padding-left: 0;
+        }
         @include col();
         @include size(7);
+        @include size-lg(6);
+        @include size-sm(12);
         padding-left: rem(60);
     }
     &__right-wrapper {
@@ -36,6 +57,9 @@
         margin-bottom: rem(45);
     }
     &__contact + &__contact {
+        @media (max-width: $break_sm) {
+            margin-top: rem(22);
+        }
         margin-top: rem(69);
     }
     &__form {
@@ -49,5 +73,12 @@
     }
     &__btn {
         margin-left: rem(35);
+    }
+    &__square {
+        position: absolute;
+        bottom: rem(-12);
+        left: rem(140);
+        width: rem(24);
+        height: rem(24);
     }
 }

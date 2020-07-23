@@ -1,6 +1,6 @@
 include ../btn/btn
-mixin title-slider()
-    section.title-slider
+mixin title-slider(value)
+    section.title-slider(class= value.parentClass ? value.parentClass : '')
         .container
             .row
                 .title-slider__wrp.swiper-container
@@ -10,16 +10,17 @@ mixin title-slider()
                                 h1.title-slider__heading.h1-heading  Новое поступление шиномонтажных станков
                                 p.title-slider__text Автоматический ввод трех  параметров, LCD монитор,  мультиоператор, aludata, 220В
                                 +btn({
+                                    square: 'square square_theme_yellow title-slider__square',
                                     class: 'btn btn_theme_yellow text_smallest title-slider__btn',
                                     text: 'Подробнее'
                                 })
-                                    .square.square_theme_yellow.title-slider__square
                         .title-slider__slide.swiper-slide
                             .title-slider__slide-wrp
                                 h1.title-slider__heading.h1-heading  Квартирный вопрос решен на всегда, ура
                                 p.title-slider__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatem!
                                 +btn({
-                                    class: 'btn.btn_theme_yellow.text_smallest.title-slider__btn',
+                                    square: 'square square_theme_yellow title-slider__square',
+                                    class: 'btn btn_theme_yellow text_smallest title-slider__btn',
                                     text: 'Подробнее'
                                 })
                                     .square.square_theme_yellow.title-slider__square
@@ -28,7 +29,8 @@ mixin title-slider()
                                 h1.title-slider__heading.h1-heading  Ваше будущее должно быть в ваших руках
                                 p.title-slider__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, blanditiis consequatur?
                                 +btn({
-                                    class: 'btn.btn_theme_yellow.text_smallest.title-slider__btn',
+                                    square: 'square square_theme_yellow title-slider__square',
+                                    class: 'btn btn_theme_yellow text_smallest title-slider__btn',
                                     text: 'Подробнее'
                                 })
                                     .square.square_theme_yellow.title-slider__square

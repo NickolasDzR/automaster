@@ -1,5 +1,12 @@
 mixin btn(value)
-    if  attr === false
-        a.btn(class= value.class ? value.class : '', href= value.href ? value.href : '') #{value.text}
+    if  !value.attr
+        if value.square
+            a.btn(class= value.class ? value.class : '', href= value.href ? value.href : '') #{value.text}
+                div(class= value.square)
+        else
+            a.btn(class= value.class ? value.class : '', href= value.href ? value.href : '') #{value.text}
+    else if value.attr && value.square
+        button.btn(class= value.class ? value.class : '') #{value.text}
+            div(class= value.square)
     else
         button.btn(class= value.class ? value.class : '') #{value.text}

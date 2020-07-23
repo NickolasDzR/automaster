@@ -2,14 +2,16 @@
     @media (max-width: $break_md) {
         width: 100%;
         height: 62%;
-        min-height: rem(356);
+        min-height: rem(220);
 
         padding: {
-            top: rem(80);
+            // top: rem(80);
             right: rem(40);
-            bottom: rem(80);
+            // bottom: rem(80);
             left: rem(40);
         }
+        @include padding('top', 'heading');
+        @include padding('bottom', 'heading');
     }
     &__list {
         display: flex;

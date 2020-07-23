@@ -51,24 +51,8 @@ const swiperBg = new Swiper(bgSliderContainer, {
 const swiperTitle = new Swiper(TitleSliderContainer, {
     virtualTranslate: false,
     setWrapperSize: false,
-    width: '1312',
-    spaceBetween: '100%',
+    spaceBetween: 30,
     breakpoints: {
-        1280: {
-            width: '1200',
-        },
-        992: {
-            width: '912',
-        },
-        768: {
-            width: '688',
-        },
-        576: {
-            width: '496',
-        },
-        320: {
-            width: '240',
-        },
     },
     speed: 1000,
     loop: true,

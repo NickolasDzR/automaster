@@ -20,7 +20,7 @@
         align-items: center;
         @include col();
         @media (max-width: $break_md) {
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             bottom: 0;
@@ -28,6 +28,7 @@
             align-items: flex-start;
             flex-wrap: wrap;
             padding: 0;
+            padding-left: rem(40);
             margin: 0;
             margin-left: -40px;
             z-index: 10;

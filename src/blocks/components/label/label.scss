@@ -5,6 +5,9 @@
     position: relative;
     @include lg(width, 100%);
     &:not(:last-child) {
+        @media (max-width: $break_lg) {
+            margin-bottom: 1.8125rem;
+        }
         margin-bottom: rem(45);
     }
 
