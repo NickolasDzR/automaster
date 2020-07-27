@@ -2,6 +2,10 @@
     @return ($px / 16) +rem;
 }
 
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
 @function fontSize($maxPx, $minPx) {
     $m: ($maxPx - $minPx) / ($containerMax - $containerMin);
     $b: rem($minPx - ($m * $containerMin));

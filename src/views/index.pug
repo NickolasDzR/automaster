@@ -1,7 +1,8 @@
 extends layouts/default
 include helpers/mixins
-include ../blocks/modules/header/header
 include ../blocks/components/modal/modal
+include ../blocks/components/catalog-modal/catalog-modal
+include ../blocks/modules/header/header
 include ../blocks/modules/main/main
 include ../blocks/modules/footer/footer
 
@@ -11,6 +12,7 @@ block variables
 block content
 	.site-container
 		+modal
+		+catalog-modal
 		+header
 		+main
 		+footer

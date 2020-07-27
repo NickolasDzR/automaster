@@ -1,7 +1,7 @@
 .title-slider {
-    // @media (max-width: $break_md) {
-    //     margin: auto 0;
-    // }
+    @media (max-width: $break_md) {
+        margin: auto 0;
+    }
     &__heading {
         @media (max-width: $break_xs) {
             line-height: rem(34);

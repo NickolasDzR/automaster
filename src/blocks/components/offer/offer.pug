@@ -1,17 +1,18 @@
-mixin offer(value, text, picture, parentClass = '')
+mixin offer(value, text, picture, parentClass = '', wrapperClass = '', textClass = '')
     .offer(class= parentClass)
-        +icon({
-            class: value.class,
-            name: value.name
-        })
-        .offer__text 
-            p.offer__title #{text}
-            p.offer__subtitle 24 позиций
-        .offer__interior
-            +picture({
-                path: picture.path,
-                name: picture.name,
-                imgType: picture.imgType,
-                sourceType: picture.sourceType,
-                ImgClass: picture.class,
+        .offer__wrapper(class= wrapperClass)
+            +icon({
+                class: value.class,
+                name: value.name
             })
+            .offer__text(class= textClass)
+                p.offer__title #{text}
+                p.offer__subtitle 24 позиций
+            .offer__interior
+                +picture({
+                    path: picture.path,
+                    name: picture.name,
+                    imgType: picture.imgType,
+                    sourceType: picture.sourceType,
+                    ImgClass: picture.class,
+                })

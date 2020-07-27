@@ -1,0 +1,10 @@
+mixin catalog-modal()
+    - const iconName = ['lift', 'speed', 'oil', 'cabel', 'blowtorch', 'lift', 'pressure', 'wrench', 'blowtorch', 'jack', 'carcass', 'tire']
+    - const offerText = 'Подъёмные оборудования'
+    - const parentClass = 'catalog-modal__offer'
+    - const containerClass = 'catalog-modal__container';
+    - const textClass = 'catalog-modal__text'
+    - const wrapperClass = 'catalog-modal__inner'
+    section.catalog-modal
+        .catalog-modal__wrapper
+            +products({slider: false, iconName, offerText, parentClass, containerClass, textClass, wrapperClass})

@@ -7,13 +7,15 @@
         }
         height: 100%;
         display: flex;
-        justify-content: space-between;
     }
     &__right {
         @media (max-width: $break_md ) {
             display: none;
         }
         @include col();
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
     }
     &__left {
         display: flex;

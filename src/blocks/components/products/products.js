@@ -1,8 +1,8 @@
 import Swiper from '../../../../node_modules/swiper/swiper-bundle';
 
-const productSlider = document.querySelector('.products__slider');
+const mainProductSlider = document.querySelector('.main .products__slider');
 
-const productSwiper = new Swiper(productSlider, {
+const mainProductSwiper = new Swiper(mainProductSlider, {
     slidesPerView: 3,
     slidesPerColumn: 4,
     slidesPerColumnFill: 'row',
@@ -34,4 +34,4 @@ const productSwiper = new Swiper(productSlider, {
             allowTouchMove: true,
         }
     }
-})
+}); 

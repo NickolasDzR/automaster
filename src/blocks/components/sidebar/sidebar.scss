@@ -41,10 +41,26 @@
         transition: background $duration linear;
         .sidebar__square {
             right: rem(-12);
-            transition: right $duration linear;
+            transition: right $duration .7s linear;
+        }
+        .svg-icon_theme_blue {
+            color: $light-blue;
+            use {
+                fill: $yellow;
+            }
+        }
+        .svg-icon_theme_white {
+            use {
+                fill: $light-blue;
+            }
+        }
+        .sidebar__text {
+            color: $light-blue;
+            transition: color $duration linear;
         }
     }
     &:hover {
+        background: $yellow;
         .svg-icon_theme_blue {
             color: $light-blue;
             use {

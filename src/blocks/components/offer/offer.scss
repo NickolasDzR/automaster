@@ -1,4 +1,7 @@
 .offer {
+    @media (max-width: $break_sm) {
+        padding-bottom: rem(15);
+    }
     padding: {
         top: rem(32);
         right: rem(32);
@@ -32,6 +35,9 @@
         font {
             size: rem(17);
         }
+        @media (max-width: $break_sm) {
+            position: absolute;
+        }
         visibility: hidden;
         opacity: 0;
         transition: {
@@ -56,6 +62,9 @@
         };
     }
     &__picture {
+        @media (max-width: $break_sm) {
+            max-width: 30%;
+        }
         position: absolute;
         opacity: 0;
         right: rem(-40);
@@ -83,6 +92,9 @@
         .offer__text {
             $iconWidth: rem(56);
             $iconMarginBottom: rem(16.5);
+            @media (max-width: $break_sm) {
+                top: rem(-5);
+            }
             top: calc(-#{$iconWidth} + -#{$iconMarginBottom});
             transition: top $duration ease-in-out;
         }
@@ -97,6 +109,7 @@
         .offer__subtitle {
             visibility: visible;
             opacity: 1;
+            position: relative;
             transition: {
                 property: visible, opacity;
                 duration: $duration;

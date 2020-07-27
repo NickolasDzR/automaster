@@ -1,14 +1,10 @@
 const sidebar = document.querySelector('.sidebar');
+const catalogModal = document.querySelector('.catalog-modal');
 
-const typeListenner = ['mouseover', 'mouseout', 'click'];
+sidebar.addEventListener('click', e => {
+    e.preventDefault();
+    // if catalogModal_active has class catalogModal_active, then remove main-nav__active class first, then remove catalogModal
+        sidebar.classList.toggle('sidebar_active');
+        catalogModal.classList.toggle('catalog-modal_active');
 
-typeListenner.forEach(el => {
-    sidebar.addEventListener(el, e => {
-        e.preventDefault();
-        if (el === 'mouseover') {
-            sidebar.classList.add('sidebar_active');
-        } else {
-            sidebar.classList.remove('sidebar_active');
-        }
-    })
 })
