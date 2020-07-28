@@ -1,13 +1,13 @@
 .catalog-modal {
     @media (max-width: $break_lg) {
         padding: {
-            top: rem(38);
-            bottom: rem(32);
+            top: 38px;
+            bottom: 32px;
         }
     }
     @media (max-width: $break_md) {
-        padding-right: rem(16);
-        padding-left: rem(40);
+        padding-right: 16px;
+        padding-left: 40px;
     }
     @media (max-width: $break_sm) {
         padding-right: 0;
@@ -19,10 +19,10 @@
     bottom: 0;
     left: 0;
     z-index: 2;
-    padding-right: rem(52);
-    padding-top: rem(65);
-    padding-bottom: rem(40);
-    padding-left: rem(80);
+    padding-right: 52px;
+    padding-top: 65px;
+    padding-bottom: 40px;
+    padding-left: 80px;
     overflow-y: hidden;
     transform: translateX(-100%);
     transition: {
@@ -68,10 +68,10 @@
         padding-bottom: rem(6);
         @media (max-width: $break_sm) {
             padding: {
-                left: rem(0);
-                right: rem(0);
-                top: rem(21.5);
-                bottom: rem(21.5);
+                left: 0;
+                right: 0;
+                top: 21px;
+                bottom: 21px;
             }
             display: flex;
             align-items: center;
@@ -80,7 +80,7 @@
     &__icon {
         @media (max-width: $break_sm) {
             max-width: 15%;
-            margin-right: rem(28);
+            margin-right: 28px;
             // margin-bottom: 0;
         }
     }

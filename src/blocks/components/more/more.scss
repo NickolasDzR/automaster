@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         margin: {
-            right: rem(19);
+            right: 19px;
         }
         &-list {
             margin: auto 0;
@@ -15,7 +15,7 @@
                 font-size: rem(10);
             }
             text-decoration: none;
-            margin-right: rem(13);
+            margin-right: 13px;
             color: $white;
             transition: color $duration linear;
             font-size: rem($text-smallest);
@@ -30,22 +30,22 @@
     }
     &__contacts {
         @media (max-width: $break_md) {
-            margin-left: rem(28);
+            margin-left: 28px;
         }
         position: relative;
         margin: {
-            left: rem(34);
+            left: 34px;
         }
         &:before {
             @media (max-width: $break_md) {
-                height: rem(28);
+                height: 28px;
             }
             content: '';
             display: inline-block;
             width: rem(1);
-            height: rem(40);
+            height: 40px;
             position: absolute;
-            left: -2.125rem;
+            left: -34px;
             background-color: $white;
         }
         &-number {

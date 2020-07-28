@@ -4,13 +4,13 @@
     justify-content: space-between;
     background: $light-blue;
     @include trans(background, linear, false);
-    padding-top: rem(32);
-    padding-right: rem(30);
-    padding-bottom: rem(32);
-    padding-left: rem(30);
+    padding-top: 32px;
+    padding-right: 30px;
+    padding-bottom: 32px;
+    padding-left: 30px;
     cursor: pointer;
     &__text {
-        margin-bottom: rem(35);
+        margin-bottom: 35px;
     }
     &__content {
         display: flex;
@@ -20,7 +20,7 @@
         @media (max-width: $break_xl) {
             font-size: fontSize($text-bigger, $text-big)
         }
-        margin-bottom: rem(18);
+        margin-bottom: 18px;
         font: {
             size: rem($text-bigger);
             weight: 600; 
@@ -38,7 +38,7 @@
         font: {
             size: rem($text-smallest);
         }
-        line-height: rem(20);
+        line-height: 20px;
         color: $white;
         @include trans(color, linear, false);
     }

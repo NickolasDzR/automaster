@@ -15,12 +15,12 @@
     &__label {
         display: flex;
         margin: {
-            bottom: rem(10);
+            bottom: 10px;
         }
     }
     &__icon {
         margin: {
-            right: rem(14);
+            right: 14px;
         };
     }
     &_icon_top {
@@ -29,7 +29,7 @@
         }
         .contact__image {
             width: 100%;
-            margin-bottom: rem(10);
+            margin-bottom: 10px;
         }
     }
 }

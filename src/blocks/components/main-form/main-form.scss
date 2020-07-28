@@ -17,7 +17,7 @@
     &__heading {
         @media (max-width: $break_sm) {
             padding-left: 0;
-            margin-bottom: rem(47);
+            margin-bottom: 47px;
         }
         font-weight: 600;
         @include margin('bottom', 'heading');
@@ -33,7 +33,7 @@
     &__left {
         @media (max-width: $break_sm) {
             padding-left: 0;
-            margin-bottom: rem(37);
+            margin-bottom: 37px;
         }
         @include col();
         @include size(5);
@@ -49,18 +49,18 @@
         @include size(7);
         @include size-lg(6);
         @include size-sm(12);
-        padding-left: rem(60);
+        padding-left: 60px;
     }
     &__right-wrapper {
         display: flex;
         justify-content: space-between;
-        margin-bottom: rem(45);
+        margin-bottom: 45px;
     }
     &__contact + &__contact {
         @media (max-width: $break_sm) {
-            margin-top: rem(22);
+            margin-top: 22px;
         }
-        margin-top: rem(69);
+        margin-top: 69px;
     }
     &__form {
         width: 100%;
@@ -72,13 +72,13 @@
         width: 50%;
     }
     &__btn {
-        margin-left: rem(35);
+        margin-left: 35px;
     }
     &__square {
         position: absolute;
-        bottom: rem(-12);
-        left: rem(140);
-        width: rem(24);
-        height: rem(24);
+        bottom: 12px;
+        left: 40px;
+        width: 24px;
+        height: 24px;
     }
 }

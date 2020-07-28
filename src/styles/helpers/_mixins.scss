@@ -1,14 +1,14 @@
-$container-xl: 75rem; // 1200px
-$container-lg: 57rem; // 912px
-$container-md: 43rem; // 688px
-$container-sm: 31rem; // 496px
+$container-xl: 1140px;
+$container-lg: 960px;
+$container-md: 720px;
+$container-sm: 540px;
 
 .container {
   @include container();
-  @include sm(max-width, #{$container-sm});
-  @include md(max-width, #{$container-md});
-  @include lg(max-width, #{$container-lg});
-  @include xl(max-width, #{$container-xl});
+  @include sm(max-width, $container-sm);
+  @include md(max-width, $container-md);
+  @include lg(max-width, $container-lg);
+  @include xl(max-width, $container-xl);
 }
 
 .row {
@@ -30,8 +30,8 @@ $container-sm: 31rem; // 496px
 $levels: (
     media:      (#{$break_xs}, #{$break_sm}, #{$break_md}, #{$break_lg}, #{$break_xl}),
     //          320       576      768      968      1280
-    section:    (rem(45), rem(60), rem(80) ,rem(80), rem(95)),
-    heading:    (rem(36), rem(36), rem(40), rem(45), rem(45)),
+    section:    (45px, 60px, 80px, 80px, 95px),
+    heading:    (36px, 36px, 40px, 45px, 45px),
 );
 
 @mixin margin($direction, $color) {

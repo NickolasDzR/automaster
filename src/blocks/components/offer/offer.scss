@@ -1,12 +1,12 @@
 .offer {
     @media (max-width: $break_sm) {
-        padding-bottom: rem(15);
+        padding-bottom: 15px;
     }
     padding: {
-        top: rem(32);
-        right: rem(32);
-        bottom: rem(39);
-        left: rem(32)
+        top: 32px;
+        right: 32px;
+        bottom: 39px;
+        left: 32px
     }
     cursor: pointer;
     transition: background $duration linear;
@@ -20,7 +20,7 @@
         @media (max-width: $break_xl) {
             font-size: fontSize($text-big, $text-normal);
         }
-        margin-bottom: rem(6);
+        margin-bottom: 6px;
         font: {
             size: rem($text-big);
             weight: 600;
@@ -48,12 +48,12 @@
         color: $white;
     }
     &__icon {
-        width: rem(56);
-        height: rem(56);
-        min-width: rem(56);
-        min-height: rem(56);
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
+        min-height: 56px;
         margin: {
-            bottom: rem(16.5);
+            bottom: re.5px;
         }
         transition: {
             property: opacity, visibility;
@@ -67,7 +67,7 @@
         }
         position: absolute;
         opacity: 0;
-        right: rem(-40);
+        right: -40px;
         visibility: hidden;
         bottom: -30px;
         transition: {
@@ -90,10 +90,10 @@
             };
         }
         .offer__text {
-            $iconWidth: rem(56);
-            $iconMarginBottom: rem(16.5);
+            $iconWidth: 56px;
+            $iconMarginBottom: 16.5px;
             @media (max-width: $break_sm) {
-                top: rem(-5);
+                top: -5px;
             }
             top: calc(-#{$iconWidth} + -#{$iconMarginBottom});
             transition: top $duration ease-in-out;

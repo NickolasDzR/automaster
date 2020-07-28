@@ -4,10 +4,10 @@
     }
     &__heading {
         @media (max-width: $break_xs) {
-            line-height: rem(34);
+            line-height: 34px;
         }
         color: $yellow;
-        margin-bottom: rem(18);
+        margin-bottom: 18px;
     }
 
     &__text {
@@ -17,13 +17,14 @@
         @media (max-width: $break_xs) {
             font-size: rem($text-normal);
         }
+        margin-bottom: 56px;
         font: {
             size: rem($text-large);
         }
         color: $white;
     }
     &__slide {
-        padding-bottom: rem(10);
+        padding-bottom: 10px;
         &-wrp {
             @include col();
             @include size(8);
@@ -33,8 +34,8 @@
     }
     &__square {
         position: absolute;
-        left: rem(18);
-        bottom: rem(2);
+        left: 18px;
+        bottom: 2px;
         transition: bottom $duration linear;
     }
     &__btn {
@@ -43,7 +44,7 @@
         }
         &:hover {
             .title-slider__square {
-                bottom: rem(-5);
+                bottom: -5px;
                 transition: bottom $duration linear;
             }
         }

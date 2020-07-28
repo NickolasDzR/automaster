@@ -8,7 +8,7 @@
         }
         @media (max-width: $break_sm) {
             margin: {
-                bottom: rem(21.42);
+                bottom: 21px;
             }
         }
         @include col();
@@ -30,15 +30,16 @@
         }
         @media (max-width: $break_sm) {
             margin: {
-                bottom: rem(22.1)
+                bottom: 22px;
             }
         }
         font: {
             size: rem($text-bigger);
+            weight: 600;
         }
         color: $light-blue;
         margin: {
-            bottom: rem(55);
+            bottom: 55px;
         }
     }
     &__text {
@@ -46,7 +47,7 @@
             font-size: fontSize($text-normal, $text-small);
         }
         @media (max-width: $break_md) {
-            line-height: rem(24);
+            line-height: 24px;
         }
         @media (max-width: $break_xs) {
             font-size: rem($text-small);
@@ -54,7 +55,7 @@
         font: {
             size: rem($text-normal);
         }
-        line-height: rem(32);
+        line-height: 32px;
     }
     &__list {
         display: flex;
@@ -68,34 +69,34 @@
         }
         @media (max-width: $break_sm) {
             margin: {
-                right: rem(15);
-                left: rem(15);
+                right: 15px;
+                left: 15px;
             }
         }
         @include size-sm(12);
         width: 50%;
         @include shift-padding-right(1);
         margin: {
-            bottom: rem(39);
+            bottom: 39px;
         };
     }
     &__icon {
         @media (max-width: $break_sm) {
-            min-width: rem(24);
-            min-height: rem(24);
-            width: rem(24);
-            height: rem(24);
+            min-width: 24px;
+            min-height: 24px;
+            width: 24px;
+            height: 24px;
             margin: {
-                right: rem(22.23);
+                right: 22px;
                 bottom: 0;
             };
         }
-        min-width: rem(48);
-        min-height: rem(48);
-        width: rem(48);
-        height: rem(48);
+        min-width: 48px;
+        min-height: 48px;
+        width: 48px;
+        height: 48px;
         margin: {
-            bottom: rem(21.75);
+            bottom: 22px;
         };
 
     }

@@ -1,8 +1,8 @@
 .pagination {
     @media (max-width: $break_md) {
-        margin-bottom: 2.9375rem;
+        margin-bottom: 47px;
     }
-    margin-bottom: rem(95);
+    margin-bottom: 95px;
     &__text {
         @media (max-width: $break_sm) {
             font-size: rem($text-small);
@@ -18,10 +18,10 @@
         &_active {
             color: $yellow;
         }
-        margin-bottom: rem(15);
+        margin-bottom: 15px;
     }
     &__item {
-        padding-bottom: rem(1);
+        padding-bottom: 1px;
     }
     &__line {
         width: 100%;
@@ -32,10 +32,10 @@
             content: '';
             width: 0;
             transition: width ($duration * 3) linear;
-            height: rem(3);
+            height: 3px;
             background-color: $yellow;
             position: absolute;
-            bottom: rem(-1);
+            bottom: -1px;
             left: 0;
             right: 0;
         }

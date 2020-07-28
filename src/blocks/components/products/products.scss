@@ -14,14 +14,14 @@
     &__heading {
         @media (max-width: $break_sm) {
             margin: {
-                bottom: rem(16);
+                bottom: 16px;
             }
         }
         @include col();
         @include size(5);
         @include size-xl(6);
         @include size-sm(12);
-        margin-top: rem(-10);
+        margin-top: -10px;
     }
     &__amount {
         @media (max-width: $break_lg) {
@@ -44,16 +44,16 @@
         @media (max-width: $break_sm) {
             line-height: inherit;
             margin: {
-                right: rem(12.52);
+                right: 13px;
             }
         }
         font: {
             size: rem(96);
             weight: 900;
         }
-        line-height: rem(76);
+        line-height: 76px;
         color: $yellow;
-        margin-right: rem(32);
+        margin-right: 32px;
     }
     &__text {
         @media (max-width: $break_sm) {
@@ -72,14 +72,14 @@
         }
         @media (max-width: $break_sm) {
             margin: {
-                bottom: rem(2);
+                bottom: 2px;
             }
         }
         font: {
             size: rem($text-big);
         }
         margin: {
-            bottom: rem(8);
+            bottom: 8px;
         };
     }
     &__bottom {
@@ -97,33 +97,33 @@
         width: 100%;
         overflow: hidden;
         margin: {
-            right: rem(15);
-            left: rem(15);
+            right: 15px;
+            left: 15px;
         }
     }
     &__slide {
-        transform: translateX(0.0625rem);
+        transform: translateX(1px);
     }
     &__slider {
         padding: {
-            bottom: rem(30);
+            bottom: 30px;
         }
     }
     &__pagination {
         bottom: 0 !important;
     }
     &__pagination-bullet {
-        width: rem(43);
-        height: rem(3);
+        width: 43px;
+        height: 3;
         background: $white;
         opacity: .5;
         transition: opacity $duration linear;
         display: inline-block;
         margin: {
             top: 0;
-            right: rem(5);
+            right: 5;
             bottom: 0;
-            left: rem(5);
+            left: 5;
         }
         &_active {
             background-color: $yellow;
@@ -136,14 +136,14 @@
             border-left: {
                 style: solid;
                 color: rgba($white, .3);
-                width: 0.0625rem;
+                width: 1px;
             }
         }
         &:nth-last-of-type(n+5) {
             border-bottom: {
                 style: solid;
                 color: rgba($white, .3);
-                width: 0.0625rem;
+                width: 1px;
             }
         }
         //1920
@@ -159,14 +159,14 @@
                 border-left: {
                     style: solid;
                     color: rgba($white, .3);
-                    width: 0.0625rem;
+                    width: 1px;
                 }
             }
             &:nth-last-of-type(n+4) {
                 border-bottom: {
                     style: solid;
                     color: rgba($white, .3);
-                    width: 0.0625rem;
+                    width: 1px;
                 }
             }
         }
@@ -183,14 +183,14 @@
                 border-left: {
                     style: solid;
                     color: rgba($white, .3);
-                    width: 0.0625rem;
+                    width: 1px;
                 }
             }
             &:nth-last-of-type(n+5) {
                 border-bottom: {
                     style: solid;
                     color: rgba($white, .3);
-                    width: 0.0625rem;
+                    width: 1px;
                 }
             }
         }

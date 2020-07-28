@@ -1,19 +1,19 @@
 .footer {
     background: $grey;
-    padding: rem(14) 0;
+    padding: 14px 0;
     &__row {
         justify-content: space-between;
     }
     &__text {
         display: inline-block;
         margin: {
-            right: rem(15);
-            left: rem(15);
+            right: 15px;
+            left: 15px;
         }
         font: {
             size: rem($text-smallest);
         }
-        line-height: rem(24);
+        line-height: 24px;
         color: $dark;
         opacity: .5;
     }

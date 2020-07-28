@@ -7,11 +7,15 @@ h1, h2, h3, h4, h5, h6, ul {
     box-sizing: border-box;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
-    font: 100% $font-family-base;
+    font-family: $font-family-base;
     background-color: $body-bg;
     color: $primary-color;
-    min-width: rem(320);
+    min-width: 320px;
     overflow-x: hidden;
     padding: 0;
     margin: 0;
@@ -20,15 +24,15 @@ body {
 .site-container {
     @media (max-width: $break_md) {
         padding: {
-            left: rem(40);
+            left: 40px;
         };
     }
-    padding-left: rem(80);
+    padding-left: 80px;
 }
 
 .svg-icon {
-    width: rem(24);
-    height: rem(24);
+    width: 24px;
+    height: 24px;
     transition: color $duration linear;
     color: $blue;
     &_theme {
@@ -117,37 +121,10 @@ body {
     }
 }
 
-.btn {
-    position: relative;
-    display: inline-block;
-    color: $white;
-    cursor: pointer;
-    text-decoration: none;
-    &_theme {
-        &_yellow {
-            background-color: $yellow;
-            color: $light-blue;
-            width: rem(244);
-            padding: {
-                top: rem(12);
-                right: rem(18);
-                bottom: rem(12);
-                left: rem(18);
-            }
-        }
-        &_blue {
-            background-color: $light-blue;
-        }
-        &_transparent {
-            background-color: transparent;
-        }
-    }
-}
-
 .square {
     display: block;
-    width: rem(10);
-    height: rem(10);
+    width: 10px;
+    height: 10px;
     transform: rotate(45deg);
     &_theme {
         &_yellow {
