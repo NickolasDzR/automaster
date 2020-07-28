@@ -30,7 +30,7 @@ const mainProductSwiper = new Swiper(mainProductSlider, {
                 clickable: true,
                 bulletClass: 'products__pagination-bullet',
                 bulletActiveClass: 'products__pagination-bullet_active',
-              },
+            },
             allowTouchMove: true,
         }
     }

@@ -1,6 +1,7 @@
 extends layouts/default
 include helpers/mixins
 include ../blocks/components/modal/modal
+include ../blocks/components/products-sub/products-sub
 include ../blocks/components/catalog-modal/catalog-modal
 include ../blocks/modules/header/header
 include ../blocks/modules/main/main
@@ -13,6 +14,7 @@ block content
 	.site-container
 		+modal
 		+catalog-modal
+		+products-sub
 		+header
 		+main
 		+footer

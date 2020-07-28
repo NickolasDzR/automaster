@@ -21,6 +21,21 @@ body {
     margin: 0;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: $light-blue;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $yellow;
+    border-radius: 5px;
+}
+
+.no-events {
+    pointer-events: none;
+    cursor: pointer;
+}
+
 .site-container {
     @media (max-width: $break_md) {
         padding: {

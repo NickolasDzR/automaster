@@ -1,7 +1,6 @@
 .header {
     height: 100vh;
     min-height: 300px;
-    overflow-x: hidden;
     &__content {
         @media (max-width: $break_md) {
             position: relative;
@@ -17,10 +16,6 @@
         height: 100%;
     }
     &__main-nav {
-        @include margin('bottom', 'heading');
-    }
-    &__title-slider{
-        margin-top: auto;
         @include margin('bottom', 'heading');
     }
     &__pagination {

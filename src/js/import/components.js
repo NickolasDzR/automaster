@@ -8,3 +8,4 @@ import "../../blocks/components/pagination/pagination";
 import "../../blocks/components/products/products";
 import "../../blocks/components/solutions/solutions";
 import "../../blocks/components/label/label";
+import "../../blocks/components/offer/offer";

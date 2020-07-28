@@ -6,4 +6,4 @@ mixin icon(value)
 mixin picture(value)
     picture
         source(srcset= "./img/" + value.path + "/" + value.name + '.' + value.sourceType type="image/" + value.sourceType)
-        img(class= value.ImgClass src= "./img" + value.path + "/" + value.name + '.' + value.imgType alt=value.name)
+        img(class= value.ImgClass src= "./img/" + value.path + "/" + value.name + '.' + value.imgType alt=value.name)

@@ -10,6 +10,7 @@ hamburger.addEventListener('click', e => {
     if (modal.classList.contains('modal_active')) {
         setTimeout(() => {
             modal.classList.remove('modal_active');
+            document.body.style.overflow = 'visible';
         }, 500);
         mainNavLeft.classList.remove('main-nav__left_active');
     } else {
@@ -17,6 +18,7 @@ hamburger.addEventListener('click', e => {
         modal.classList.add('modal_active');
         setTimeout(() => {
             mainNavLeft.classList.add('main-nav__left_active');
+            document.body.style.overflow = 'hidden';
         }, 700);
     }
 })

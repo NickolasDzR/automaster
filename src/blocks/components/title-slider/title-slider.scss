@@ -17,6 +17,9 @@
         @media (max-width: $break_xs) {
             font-size: rem($text-normal);
         }
+        @media (max-width: $break_sm) {
+            margin-bottom: 0;
+        }
         margin-bottom: 56px;
         font: {
             size: rem($text-large);

@@ -1,0 +1,41 @@
+mixin products-sub()
+    section.products-sub
+        .container
+            .row
+                .products-sub__left
+                    .products-sub__box
+                        a.products-sub__anchor(href="#")
+                            +icon({
+                                class: 'svg-icon products-sub__icon products-sub__icon_left',
+                                name: 'arrow',
+                            })
+                            |    Вернуться к каталогу
+                    h1.products-sub__heading  Шиномонтажное оборудовния
+                    p.products-sub__text Шиномонтажные станки подразделяются на два типа: полуавтоматические и автоматические агрегаты. Основным отличием между ними является регулировка фиксирующей лапы. На автомате она перемещается посредством нажатия на педаль, активирующую пневматический цилиндр. На полуавтомате управление зажимным приспособлением осуществляется вручную.
+                .products-sub__right
+                    nav.products-sub__nav
+                        ul.products-sub__list
+                            li.products-sub__item
+                                a.products-sub__link(href="#") Легковые балансировочные станки
+                                    +icon({
+                                        class: 'svg-icon products-sub__icon',
+                                        name: 'arrow',
+                                    })
+                            li.products-sub__item
+                                a.products-sub__link(href="#") Легковые шиномонтажные станки
+                                    +icon({
+                                        class: 'svg-icon products-sub__icon',
+                                        name: 'arrow',
+                                    })
+                            li.products-sub__item
+                                a.products-sub__link(href="#") Мойка колес для шиномонтажа
+                                    +icon({
+                                        class: 'svg-icon products-sub__icon',
+                                        name: 'arrow',
+                                    })
+                            li.products-sub__item
+                                a.products-sub__link(href="#") Стенды для накачки азотом
+                                    +icon({
+                                        class: 'svg-icon products-sub__icon',
+                                        name: 'arrow',
+                                    })

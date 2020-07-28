@@ -1,6 +1,10 @@
 .offer {
     @media (max-width: $break_sm) {
-        padding-bottom: 15px;
+        padding: {
+            right: 7px;
+            left: 7px;
+            bottom: 15px;
+        }
     }
     padding: {
         top: 32px;
@@ -11,6 +15,12 @@
     cursor: pointer;
     transition: background $duration linear;
     position: relative;
+    &__wrapper {
+        @media (max-width: $break_sm) {
+            display: flex;
+            align-items: center;
+        }
+    }
     &__text {
         position: relative;
         top: 0;
@@ -48,12 +58,15 @@
         color: $white;
     }
     &__icon {
+        @media (max-width: $break_sm) {
+            margin-right: 28px;
+        }
         width: 56px;
         height: 56px;
         min-width: 56px;
         min-height: 56px;
         margin: {
-            bottom: re.5px;
+            bottom: 5px;
         }
         transition: {
             property: opacity, visibility;

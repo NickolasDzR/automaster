@@ -23,7 +23,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     display: none;
     position: fixed;
     right: 0;
-    z-index: 15;
+    z-index: 1;
     padding: $hamburger-padding-y $hamburger-padding-x;
     cursor: pointer;
   
@@ -50,6 +50,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     }
   
     &.is-active {
+      z-index: 300;
       &:hover {
         @if $hamburger-hover-use-filter == true {
           filter: $hamburger-active-hover-filter;
