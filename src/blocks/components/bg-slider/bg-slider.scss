@@ -1,6 +1,6 @@
 .bg-slider {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -9,8 +9,11 @@
     z-index: -1;
 
     &__slide {
-        width: 100vw;
-        height: 100vh;
+        @media (max-width: $break_md) {
+            height: max(100vh, 340px);
+        }
+        width: 100%;
+        height: max(100vh, 550px);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

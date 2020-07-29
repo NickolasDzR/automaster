@@ -6,6 +6,14 @@
     @return $num / ($num * 0 + 1);
 }
 
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+  }
+  
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
 @function fontSize($maxPx, $minPx) {
     $m: ($maxPx - $minPx) / ($containerMax - $containerMin);
     $b: rem($minPx - ($m * $containerMin));

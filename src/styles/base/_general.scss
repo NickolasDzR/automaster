@@ -36,6 +36,10 @@ body {
     cursor: pointer;
 }
 
+.overflow-hidden {
+    overflow-x: hidden;
+}
+
 .site-container {
     @media (max-width: $break_md) {
         padding: {

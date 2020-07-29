@@ -1,21 +1,27 @@
-const sidebar = document.querySelector('.sidebar');
-const catalogModal = document.querySelector('.catalog-modal');
-const hamburger = document.querySelector('.hamburger');
+const bodyTag = document.body;
 
-sidebar.addEventListener('click', e => {
-    e.preventDefault();
-    // if catalogModal_active has class catalogModal_active, then remove main-nav__active class first, then remove catalogModal
-    if (document.body.style.overflow === 'visible' || document.body.style.overflow === '') {
-        setTimeout(() => {
-            document.body.style.overflow = 'hidden'
-        }, 700);
-    } else {
-        setTimeout(() => {
-            document.body.style = '';
-        }, 700);
-    }
-    hamburger.classList.toggle('no-events');
-    sidebar.classList.toggle('sidebar_active');
-    catalogModal.classList.toggle('catalog-modal_active');
+if (document.querySelector('.sidebar')) {
+    const sidebar = document.querySelector('.sidebar');
+    const catalogModal = document.querySelector('.catalog-modal');
+    const hamburger = document.querySelector('.hamburger');
+    const productsSub = document.querySelector('.products-sub');
 
-})
+    sidebar.addEventListener('click', e => {
+        e.preventDefault();
+
+        if (sidebar.classList.contains('sidebar_active')) {
+            sidebar.classList.remove('sidebar_active');
+            catalogModal.classList.remove('catalog-modal_active');
+            bodyTag.classList.remove('overflow-hidden');
+            if (productsSub.classList.contains('products-sub_active')) {
+                productsSub.classList.remove('products-sub_active');
+            }
+        } else {
+            sidebar.classList.add('sidebar_active');
+            catalogModal.classList.add('catalog-modal_active');
+            setTimeout(() => {
+                bodyTag.classList.add('overflow-hidden');
+            }, 700);
+        };
+    });
+};

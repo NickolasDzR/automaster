@@ -110,26 +110,35 @@
         }
     }
     &__pagination {
+        @media (max-width: $break_md) {
+            display: flex;
+        }
+        display: none;
+        position: absolute;
         bottom: 0 !important;
+        justify-content: center;
     }
     &__pagination-bullet {
         width: 43px;
-        height: 3;
+        height: 3px;
         background: $white;
         opacity: .5;
         transition: opacity $duration linear;
         display: inline-block;
         margin: {
             top: 0;
-            right: 5;
+            right: 5px;
             bottom: 0;
-            left: 5;
+            left: 5px;
         }
         &_active {
             background-color: $yellow;
             opacity: 1;
             transition: opacity $duration linear;
         }
+    }
+    &__pagination-hidden {
+        display: none;
     }
     &__slide {
         &:not(:nth-of-type(4n+1)) {

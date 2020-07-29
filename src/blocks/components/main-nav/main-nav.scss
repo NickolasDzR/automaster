@@ -27,13 +27,15 @@
             right: 0;
             bottom: 0;
             left: 0;
+            min-width: 100%;
+            min-height: 100%;
             align-items: flex-start;
             flex-wrap: wrap;
             padding: 0;
-            padding-left: 40px;
             margin: 0;
-            margin-left: -40px;
             z-index: 10;
+            overflow-x: hidden;
+            overflow-y: scroll;
             visibility: hidden;
             pointer-events: none;
             opacity: 0;

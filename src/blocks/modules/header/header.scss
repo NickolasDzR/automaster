@@ -1,6 +1,9 @@
 .header {
-    height: 100vh;
-    min-height: 300px;
+    @media (max-width: $break_md) {
+        height: max(100vh, 340px);
+    }
+    position: relative;
+    height: max(100vh, 550px);
     &__content {
         @media (max-width: $break_md) {
             position: relative;
