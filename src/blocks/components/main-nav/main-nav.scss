@@ -59,6 +59,18 @@
             }
         }
     }
+    &_theme_blue .menu__link{
+        color: $light-blue;
+    }
+    &_theme_blue .more__language-link {
+        color: $light-blue;
+    }
+    &_theme_blue .more__contacts-number {
+        color: $light-blue;
+    }
+    &_theme_blue .more__contacts-direct {
+        color: $light-blue;
+    }
 }
 
 @import '../menu/menu';

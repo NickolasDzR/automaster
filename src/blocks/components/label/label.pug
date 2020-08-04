@@ -3,7 +3,7 @@ mixin label(value)
     if !value.attr
         .label(class= value.boxClass ? value.boxClass : '')
             label.label__title(class= value.labelClass ? value.labelClass : '', data-title= value.data)
-                input.label__input(class= value.inputClass ? value.inputClass : '', type= value.type)
+                input.label__input(class= value.inputClass ? value.inputClass : '', type= value.type,)
     else
         .label(class= value.boxClass ? value.boxClass : '')
             label.label__title.label__title_textarea(class= value.labelClass ? value.labelClass : '', data-title= value.data)

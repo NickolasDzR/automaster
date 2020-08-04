@@ -3,12 +3,13 @@ include helpers/mixins
 include ../blocks/components/modal/modal
 include ../blocks/components/products-sub/products-sub
 include ../blocks/components/catalog-modal/catalog-modal
-include ../blocks/modules/header/header
-include ../blocks/modules/main/main
-include ../blocks/modules/footer/footer
+include ../blocks/modules/index/header/header
+include ../blocks/modules/index/main/main
+include ../blocks/modules/index/footer/footer
 
 block variables
 	- const title = "gulp-pug-starter"
+	- const page = 'index'
 
 block content
 	.site-container

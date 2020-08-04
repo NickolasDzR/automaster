@@ -1,0 +1,12 @@
+mixin breadcrumbs(textArray, activeIndex)
+    section.breadcrumbs
+        .container
+            .row
+                .breadcrumbs__wrapper
+                    ul.breadcrumbs__list
+                        each val, index in textArray
+                            li.breadcrumbs__item
+                                if (activeIndex === index) 
+                                    a(href="#" class='breadcrumbs__active')= val
+                                else
+                                    a(href="#")= val
