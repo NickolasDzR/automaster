@@ -1,0 +1,53 @@
+extends ../layouts/default
+
+include ../../blocks/components/modal/modal
+include ../../blocks/modules/products-sub/products-sub
+include ../../blocks/components/catalog-modal/catalog-modal
+
+include ../../blocks/components/hamburger/hamburger
+include ../../blocks/modules/main-nav/main-nav
+include ../../blocks/modules/bg-slider/bg-slider
+include ../../blocks/modules/title-slider/title-slider
+include ../../blocks/components/pagination/pagination
+include ../../blocks/modules/sidebar/sidebar
+include ../../blocks/components/breadcrumbs/breadcrumbs
+include ../../blocks/components/getback/getback
+
+block variables
+	- const title = "New Page";
+	- const page = 'catalog'
+	- const breadcrumbsText = ['Главная', 'Каталог товаров', 'Оборудование для заправки кондиционеров']
+	- const activeIndex = 1;
+
+block content
+	.site-container
+		+modal
+		+catalog-modal
+		+products-sub
+		header
+			+hamburger({ parentClass: 'hamburger_theme_blue' })
+			+sidebar
+			.header__content
+				+main-nav({
+					class: 'main-nav_theme_blue header__main-nav',
+					containerClass: 'header__container'
+				})
+		main.main
+			section.main__breadcrumbs
+				.container
+					.row
+						+breadcrumbs(
+								{
+								textArray: breadcrumbsText,
+								activeIndex: activeIndex,
+								}
+							)
+			section.getback-link
+				.container
+					.row
+						.getback-link__wrapper
+							+getback({adaptiveText: 'Назад в каталог'})
+
+block scripts
+	//- sites scripts
+	include ../layouts/scripts

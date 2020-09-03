@@ -1,4 +1,4 @@
-import Swiper from '../../../../node_modules/swiper/swiper-bundle';
+import Swiper from 'swiper/swiper-bundle';
 
 const bgSliderContainer = document.querySelector('.bg-slider__container');
 const TitleSliderContainer = document.querySelector('.title-slider__wrp');

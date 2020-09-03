@@ -1,0 +1,8 @@
+mixin getback({ parentClass, adaptiveText } = false)
+    a.getback(href="/" class=parentClass) <span class='getback__span'>Назад</span>
+        if (adaptiveText)
+            span(class="getback__adaptive-text") #{adaptiveText}
+        +icon({
+            class: "svg-icon getback__icon",
+            name: 'arrow-in',
+        })

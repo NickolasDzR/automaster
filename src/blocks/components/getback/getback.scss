@@ -1,0 +1,54 @@
+.getback {
+    position: relative;
+    text-decoration: none;
+
+    color: #062945;
+    opacity: .5;
+    font-family: 'Gilroy';
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 21px;
+    @media (max-width: $break_xl) {
+        font-size: fontSize($text-large, $text-small);
+    }
+    @media (max-width: $break_md) {
+        opacity: 1;
+    }
+    @media (max-width: $break_xs) {
+        font-size: rem($text-small);
+    }
+    &__icon {
+        @media (max-width: $break_md) {
+            color: $light-blue;
+            use {
+                fill: $light-blue;
+            }
+        }
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        color: #7D7D7D;
+        opacity: 1;
+        use {
+            fill: #8092A0;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &__span {
+        @media (max-width: $break_md) {
+            display: none;
+        }
+    }
+    &__adaptive-text {
+        display: none;
+        font-weight: 400;
+        @media (max-width: $break_md) {
+            display: inline;
+            color: $light-blue;
+        }
+    }
+}

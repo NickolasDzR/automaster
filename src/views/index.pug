@@ -1,27 +1,60 @@
 extends layouts/default
 include helpers/mixins
 include ../blocks/components/modal/modal
-include ../blocks/components/products-sub/products-sub
+include ../blocks/modules/products-sub/products-sub
 include ../blocks/components/catalog-modal/catalog-modal
-include ../blocks/modules/index/header/header
-include ../blocks/modules/index/main/main
-include ../blocks/modules/index/footer/footer
+
+include ../blocks/components/hamburger/hamburger
+include ../blocks/modules/main-nav/main-nav
+include ../blocks/modules/bg-slider/bg-slider
+include ../blocks/modules/title-slider/title-slider
+include ../blocks/components/pagination/pagination
+include ../blocks/modules/sidebar/sidebar
+include ../blocks/components/breadcrumbs/breadcrumbs
+
+include ../blocks/modules/advantages/advantages
+include ../blocks/modules/products/products
+include ../blocks/modules/solutions/solutions
+include ../blocks/modules/main-form/main-form
 
 block variables
 	- const title = "gulp-pug-starter"
 	- const page = 'index'
+	- const iconName = ['lift', 'speed', 'oil', 'cabel', 'blowtorch', 'lift', 'pressure', 'wrench', 'blowtorch', 'jack', 'carcass', 'tire']
+	- const offerText = 'Подъёмные оборудования'
+	- const parentClass = 'products__offer'
 
 block content
 	.site-container
 		+modal
 		+catalog-modal
 		+products-sub
-		+header
-		+main
-		+footer
+		header
+			+hamburger
+			+sidebar
+			+bg-slider
+			.header__content
+				+main-nav({
+					class: 'header__main-nav',
+					containerClass: 'header__container'
+				})
+				+title-slider({parentClass: 'header__title-slider'})
+				+pagination({
+					class: 'header__pagination'
+				})
+		main.main
+			+advantages
+			+products({slider: true, iconName, offerText, parentClass})
+			+solutions
+			+main-form
+		footer.footer
+			.container
+				.row.footer__row
+					span.footer__text Copyright © automaster.uz 2019-2029
+					span.footer__text Created by 360 creative agency
 	
 	
 
 block scripts
-	script(src="js/main.js")
-	script(src="js/vendor.js")
+	//- sites scripts
+	include layouts/scripts

@@ -1,12 +1,12 @@
-mixin breadcrumbs(textArray, activeIndex)
-    section.breadcrumbs
-        .container
-            .row
-                .breadcrumbs__wrapper
-                    ul.breadcrumbs__list
-                        each val, index in textArray
-                            li.breadcrumbs__item
-                                if (activeIndex === index) 
-                                    a(href="#" class='breadcrumbs__active')= val
-                                else
-                                    a(href="#")= val
+mixin breadcrumbs({parentClass = false, activeIndex, textArray})
+    // begin::: breadcrumbs
+    div.breadcrumbs(class= parentClass ? parentClass : '')
+        .breadcrumbs__wrapper
+            ul.breadcrumbs__list
+                each val, index in textArray
+                    li.breadcrumbs__item
+                        if (activeIndex === index) 
+                            a(href="#" class='breadcrumbs__link breadcrumbs__link_active')= val
+                        else
+                            a(href="#" class="breadcrumbs__link")= val
+    // end::: breadcrumbs
