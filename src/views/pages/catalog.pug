@@ -12,11 +12,14 @@ include ../../blocks/components/pagination/pagination
 include ../../blocks/modules/sidebar/sidebar
 include ../../blocks/components/breadcrumbs/breadcrumbs
 include ../../blocks/components/getback/getback
+include ../../blocks/components/products-filter/products-filter
 
 block variables
 	- const title = "New Page";
 	- const page = 'catalog'
 	- const breadcrumbsText = ['Главная', 'Каталог товаров', 'Оборудование для заправки кондиционеров']
+	- const filterItem = ['По бренду', 'По мощности', 'Случайно',]
+	- const firstFilterItem = 'По цене'
 	- const activeIndex = 1;
 
 block content
@@ -45,8 +48,10 @@ block content
 			section.getback-link
 				.container
 					.row
-						.getback-link__wrapper
-							+getback({adaptiveText: 'Назад в каталог'})
+						.getback-link__wrp
+							.getback-link__link
+								+getback({adaptiveText: 'Назад в каталог'})
+							+products-filter({parentClass: 'getback-link__filter', text: 'Сортировать:', filterItem, firstFilterItem})
 
 block scripts
 	//- sites scripts

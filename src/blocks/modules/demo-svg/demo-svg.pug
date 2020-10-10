@@ -1,0 +1,89 @@
+mixin demo-svg()
+    include ../../../views/helpers/mixins
+    -
+        const demoSvg = [
+            {
+                name: 'arrow',
+            },
+            {
+                name: 'building',
+            },
+            {
+                name: 'gear',
+            },
+            {
+                name: 'grid',
+            },
+            {
+                name: 'logo',
+            },
+            {
+                name: 'mail',
+            },
+            {
+                name: 'menu-blowtorch',
+            },
+            {
+                name: 'menu-cabel',
+            },
+            {
+                name: 'menu-carcass',
+            },
+            {
+                name: 'menu-jack',
+            },
+            {
+                name: 'menu-lift',
+            },
+            {
+                name: 'menu-oil',
+            },
+            {
+                name: 'menu-pressure',
+            },
+            {
+                name: 'menu-speed',
+            },
+            {
+                name: 'menu-tire',
+            },
+            {
+                name: 'menu-wrench',
+            },
+            {
+                name: 'notebook',
+            },
+            {
+                name: 'phone',
+            },
+            {
+                name: 'send-arrow',
+            },
+            {
+                name: 'triangle',
+            },
+            {
+                name: 'wheels',
+            },
+            {
+                name: 'worker',
+            },
+            {
+                name: 'catalog-filter',
+            },
+            {
+                name: 'lists',
+            },
+        ];
+    .demo-svg
+        .container
+            h1.demo-svg__title.h1-heading Demo page
+            ul.demo-svg__list
+                each val in demoSvg
+                    li.demo-svg__item
+                        +icon({
+                            class: 'demo-svg__img',
+                            name: val.name,
+                        })
+                        .demo-svg__info
+                            h4.demo-svg__name.h4-heading #{val.name}

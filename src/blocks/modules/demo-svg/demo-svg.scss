@@ -1,0 +1,44 @@
+.demo-svg {
+    min-height: 100vh;
+    padding-top: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: grey;
+
+    &__title {
+        margin-bottom: 40px;
+        font-weight: 600;
+        color: $light-blue;
+    }
+    &__list {
+        @include row-flex();
+        margin-bottom: -32px;
+    }
+    &__item {
+        @include col();
+        @include size(4);
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+    &__name {
+        color: $white;
+    }
+    &__info {
+        margin-left: 24px;
+    }
+    &__img {
+        cursor: pointer;
+        max-width: 100%;
+        width: 80px;
+        height: 80px;
+        color: $yellow;
+        fill: $light-blue;
+        &:hover {
+            fill: $yellow;
+            color: $light-blue;
+            transition-property: fill color;
+            transition: .3s linear;
+        }
+    }
+}

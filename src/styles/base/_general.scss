@@ -138,6 +138,11 @@ body {
             color: $grey;
         }
     }
+    &_weight {
+        &_bold {
+            font-weight: 700;
+        }
+    }
 }
 
 .square {
@@ -200,6 +205,19 @@ body {
         position: absolute;
         top: 11px;
     }
+    &__wrp {
+        @include col();
+        @include size(12);
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+        @include col();
+        @include size(6);
+    }
+    &__filter {
+        @extend .getback-link__link;
+    }
 }
 
 // footer 
@@ -224,8 +242,3 @@ body {
     }
 }
 // footer ends
-
-.getback-link__wrapper {
-    @include col();
-    @include size(12);
-}

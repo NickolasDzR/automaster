@@ -20,21 +20,23 @@ const changeSlide = (i) => {
     });
 }
 
-const pagination = document.querySelector('.pagination')
-const paginationSwiperContainer = pagination.querySelector('.swiper-container');
+if (document.querySelector('.pagination')) {
+    const pagination = document.querySelector('.pagination')
+    const paginationSwiperContainer = pagination.querySelector('.swiper-container');
 
-const paginationSlider = new Swiper(paginationSwiperContainer, {
-    loop: false,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    allowTouchMove: false,
-    speed: 1000,
-    breakpoints: {
-        576: {
-            slidesPerView: 3,
+    const paginationSlider = new Swiper(paginationSwiperContainer, {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        allowTouchMove: false,
+        speed: 1000,
+        breakpoints: {
+            576: {
+                slidesPerView: 3,
+            }
         }
-    }
-});
+    });
+}
 
 const swiperBg = new Swiper(bgSliderContainer, {
     touchRation: 0,
