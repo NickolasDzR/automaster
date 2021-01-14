@@ -1,12 +1,11 @@
-mixin products-filter({parentClass, text, filterItem, firstItemList = false} = false)
+mixin products-filter({parentClass, text, firstItemList} = false)
     div.products-filter(class= parentClass)
         p.products-filter__paragraph #{text}
         .products-filter__category
-            if filterItem
-                .products-filter__dropdown-wrp
-                    span.products-filter__category-item.text_small.text_color_light-blue.text_weight_bold #{firstFilterItem}
-                    ul.products-filter__list
-                        each val in filterItem
-                            li.products-filter__item
-                                span.products-fiter__text.text_small.text_color_light-blue.text_weight_bold #{val}
-                    
+            .products-filter__dropdown-wrp
+                span.products-filter__category-item.text_small.text_color_light-blue.text_weight_bold(v-html="message")
+                - firstItemList.shift();
+                ul.products-filter__list
+                    each val in firstItemList
+                        li.products-filter__item
+                            span.products-fiter__text.text_small.text_color_light-blue.text_weight_bold(@click="changeTitle") #{val}

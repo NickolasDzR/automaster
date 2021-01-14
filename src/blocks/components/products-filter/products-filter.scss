@@ -20,7 +20,10 @@ $transitionDuration: .2s;
         position: absolute;
         white-space: nowrap;
         pointer-events: none;
-        bottom: -5px;
+        top: 17px;
+    }
+    &__item {
+        cursor: pointer;
     }
     @for $i from 1 through $filterItems {
         &__item:nth-of-type(#{$i}) {
@@ -34,7 +37,6 @@ $transitionDuration: .2s;
     }
     &__dropdown-wrp {
         position: relative;
-        padding-bottom: 100%;
         display: flex;
         &:hover {
             .products-filter__list {
@@ -52,8 +54,31 @@ $transitionDuration: .2s;
         }
         }
     }
-    .products-fiter__text {
+    &__text {
         padding: 4px 0;
         cursor: pointer;
+    }
+    &__svg {
+        width: 10px;
+        height: 10px;
+        position: relative;
+        top: 1px;
+        margin-left: 5px;
+    }
+    &__left {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        padding-right: 35px;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 18px;
+            background-color: $grey;
+            position: absolute;
+            top: 0;
+            right: 17.5px;
+        }
     }
 }

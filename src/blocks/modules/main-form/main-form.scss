@@ -13,6 +13,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        &::placeholder {
+            font-style: 10px;
+        }
     }
     &__heading {
         @media (max-width: $break_sm) {

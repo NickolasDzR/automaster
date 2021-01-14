@@ -16,14 +16,13 @@ include ../../blocks/components/products-filter/products-filter
 
 block variables
 	- const title = "New Page";
-	- const page = 'catalog'
-	- const breadcrumbsText = ['Главная', 'Каталог товаров', 'Оборудование для заправки кондиционеров']
-	- const filterItem = ['По бренду', 'По мощности', 'Случайно',]
-	- const firstFilterItem = 'По цене'
+	- const page = 'catalog';
+	- const breadcrumbsText = ['Главная', 'Каталог товаров', 'Оборудование для заправки кондиционеров'];
 	- const activeIndex = 1;
+	- const filterItems = ['По цене', 'По производителю', 'По качеству'];
 
 block content
-	.site-container
+	.site-container#app
 		+modal
 		+catalog-modal
 		+products-sub
@@ -51,7 +50,11 @@ block content
 						.getback-link__wrp
 							.getback-link__link
 								+getback({adaptiveText: 'Назад в каталог'})
-							+products-filter({parentClass: 'getback-link__filter', text: 'Сортировать:', filterItem, firstFilterItem})
+							+products-filter({
+								parentClass: 'getback-link__filter',
+								text: 'Сортировать:', 
+								firstItemList: filterItems,
+							})
 
 block scripts
 	//- sites scripts

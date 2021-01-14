@@ -4,27 +4,32 @@ const bgSliderContainer = document.querySelector('.bg-slider__container');
 const TitleSliderContainer = document.querySelector('.title-slider__wrp');
 const paginationLines = document.querySelectorAll('.pagination__line');
 
-const paginationItemInitAimation = () => paginationLines[0].classList.add('pagination__line_active');
+let initiateIndexSlider = 0;
+const paginationItemInitAimation = () => paginationLines[initiateIndexSlider].classList.add('pagination__line_active');
 
 window.onload = () => {
-    paginationItemInitAimation();
+    if (document.querySelector('.pagination__line')) {
+        paginationItemInitAimation();
+    }
 };
 
-const changeSlide = (i) => {
+const changeSlide = (i, prev) => {
     paginationLines.forEach((el, index) => {
         if (i === index) {
-            el.classList.add('pagination__line_active');
+            el.classList.add(`pagination__line_active`);
         } else {
-            el.classList.remove('pagination__line_active');
+            el.classList.remove(`pagination__line_active`);
         }
     });
 }
+
+let paginationSlider;
 
 if (document.querySelector('.pagination')) {
     const pagination = document.querySelector('.pagination')
     const paginationSwiperContainer = pagination.querySelector('.swiper-container');
 
-    const paginationSlider = new Swiper(paginationSwiperContainer, {
+    paginationSlider = new Swiper(paginationSwiperContainer, {
         loop: false,
         slidesPerView: 1,
         spaceBetween: 30,
@@ -42,13 +47,15 @@ const swiperBg = new Swiper(bgSliderContainer, {
     touchRation: 0,
     effect: 'fade',
     allowTouchMove: false,
-        on: {
-            slideChange: () => {
-                paginationSlider.slideTo(swiperBg.activeIndex);
-                changeSlide(swiperBg.activeIndex);
-            },
+    on: {
+        slideChange: (arg) => {
+            paginationSlider.slideTo(swiperBg.activeIndex);
+            changeSlide(swiperBg.activeIndex, swiperBg.previousIndex);
         },
+    },
 });
+
+swiperBg.on('onSlideNext', function(){console.log('slide next')});
 
 const swiperTitle = new Swiper(TitleSliderContainer, {
     virtualTranslate: false,
@@ -61,6 +68,7 @@ const swiperTitle = new Swiper(TitleSliderContainer, {
     loopedSlides: 3,
     autoplay: {
         delay: 4000,
+        disableOnInteraction: false
     },
     thumbs: {
         swiper: swiperBg,

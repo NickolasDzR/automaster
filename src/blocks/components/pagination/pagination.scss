@@ -31,18 +31,19 @@
         &:before {
             content: '';
             width: 0;
-            transition: width ($duration * 3) linear;
+            transition: width 1s linear;
             height: 3px;
             background-color: $yellow;
             position: absolute;
             bottom: -1px;
-            left: 0;
+            left: inherit;
             right: 0;
         }
         &_active {
             &:before {
                 width: 100%;
                 transition: width (($duration + .2) * 10) linear;
+                right: auto;
             }
         }
     }
