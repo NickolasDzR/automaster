@@ -73,6 +73,12 @@ body {
                 fill: $light-blue;
             }
         }
+        &_grey {
+            use {
+                transition: fill $duration linear;
+                fill: $grey;
+            }
+        }
     }
 }
 
@@ -191,6 +197,15 @@ body {
 }
 // header ends
 
+// main
+.main {
+    &__goods {
+        @include col();
+        @include size(6);
+    }
+}
+// main ends
+
 // main 
 .main__breadcrumbs {
     @media (max-width: $break_md) {
@@ -200,20 +215,24 @@ body {
 }
 
 .getback-link {
-    @media (max-width: $break_md) {
-        display: inline-block;
-        position: absolute;
-        top: 11px;
-    }
-    &__wrp {
+    // @media (max-width: $break_md) {
+    //     display: inline-block;
+    //     position: absolute;
+    //     top: 11px;
+    // }
+        @media (max-width: $break_md) {
+            flex-wrap: wrap;
+        }
         @include col();
         @include size(12);
         display: flex;
         justify-content: space-between;
-    }
+        margin-bottom: 24px;
     &__link {
-        @include col();
-        @include size(6);
+        @media (max-width: $break_md) {
+            margin-bottom: 40px;
+        }
+        @include size-md(12);
     }
     &__filter {
         @extend .getback-link__link;

@@ -1,0 +1,67 @@
+.goods {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        width: 260px;
+        margin-bottom: 30px;
+        height: 352px;
+        padding: 25px;
+
+        background-color: #E6E7E8;
+
+        overflow: hidden;
+    }
+    &__title {
+        max-width: 132px;
+        z-index: 1;
+    }
+    &__info {
+        z-index: 1;
+    }
+    &__additional {
+        margin-top: auto;
+        z-index: 1;
+    }
+    &__link {
+        display: inline-block;
+        margin-bottom: 12px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        color: $light-blue;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &__about {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 0;
+    }
+    &__logo {
+        max-width: 54px;
+        position: absolute;
+        top: 35px;
+        right: 31px;
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        
+        max-width: 80px;
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 16px;
+        color: $light-blue;
+        margin-bottom: 11px;
+    }
+}

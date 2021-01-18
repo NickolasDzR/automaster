@@ -1,0 +1,3 @@
+mixin goods({parentClass = false} = false)
+    .goods
+        goods-items(v-for="goodsItems in goodsFilter" :key="goodsItems.title" :item="goodsItems")

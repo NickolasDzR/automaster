@@ -1,11 +1,24 @@
 mixin products-filter({parentClass, text, firstItemList} = false)
     div.products-filter(class= parentClass)
-        p.products-filter__paragraph #{text}
-        .products-filter__category
-            .products-filter__dropdown-wrp
-                span.products-filter__category-item.text_small.text_color_light-blue.text_weight_bold(v-html="message")
-                - firstItemList.shift();
-                ul.products-filter__list
-                    each val in firstItemList
-                        li.products-filter__item
-                            span.products-fiter__text.text_small.text_color_light-blue.text_weight_bold(@click="changeTitle") #{val}
+        .products-filter__dropdown
+            p.products-filter__paragraph #{text}
+            .products-filter__category
+                .products-filter__dropdown-wrp
+                    span.products-filter__category-item.text_small.text_color_light-blue.text_weight_bold(v-html="titleSort")
+                    ul.products-filter__list
+                        li.products-filter__item(v-for="item in sort" :key="item.message")
+                            span.products-filter__text.text_small.text_color_light-blue.text_weight_bold(@click="changeTitle") {{ item.message }}
+        .products-filter__sort
+            ul.products-filter__sort-list
+                li.products-filter__sort-item
+                    span.products-filter__sort-span
+                        +icon({
+                            name: 'grid',
+                            class: 'svg-icon svg-icon_theme_blue products-filter__sort-svg'
+                        })
+                li.products-filter__sort-item
+                    span.products-filter__sort-span
+                        +icon({
+                            name: 'lists',
+                            class: 'svg-icon svg-icon_theme_grey products-filter__sort-svg'
+                        })

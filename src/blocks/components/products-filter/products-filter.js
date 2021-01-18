@@ -1,7 +1,11 @@
-var app = new Vue({
+var productFilter = new Vue({
     el: '.products-filter',
     data: {
-        message: 'По цене',
+        titleSort: 'По цене',
+        sort: [
+            {message: "По цене"},
+            {message: "По наличию"},
+        ]
     },
     methods: {
         changeTitle: function(el) {
@@ -11,10 +15,6 @@ var app = new Vue({
         },
     },
     mounted() {
-        var productsFilterItem = document.querySelector('.products-filter__item'),
-            widthProductFilterItem = productsFilterItem.offsetWidth,
-            productsFilterCatogodyItem = document.querySelector('.products-filter__category-item');
-
-            productsFilterCatogodyItem.style.minWidth = `${widthProductFilterItem}px`;
+        console.log('loaded');
     }
 })

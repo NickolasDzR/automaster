@@ -13,13 +13,13 @@ include ../../blocks/modules/sidebar/sidebar
 include ../../blocks/components/breadcrumbs/breadcrumbs
 include ../../blocks/components/getback/getback
 include ../../blocks/components/products-filter/products-filter
+include ../../blocks/modules/goods/goods
 
 block variables
 	- const title = "New Page";
 	- const page = 'catalog';
 	- const breadcrumbsText = ['Главная', 'Каталог товаров', 'Оборудование для заправки кондиционеров'];
 	- const activeIndex = 1;
-	- const filterItems = ['По цене', 'По производителю', 'По качеству'];
 
 block content
 	.site-container#app
@@ -44,10 +44,10 @@ block content
 								activeIndex: activeIndex,
 								}
 							)
-			section.getback-link
+			section.section
 				.container
 					.row
-						.getback-link__wrp
+						.getback-link
 							.getback-link__link
 								+getback({adaptiveText: 'Назад в каталог'})
 							+products-filter({
@@ -55,7 +55,11 @@ block content
 								text: 'Сортировать:', 
 								firstItemList: filterItems,
 							})
-
+			section.section
+				.container
+					.row
+						.main__goods
+							+goods
 block scripts
 	//- sites scripts
 	include ../layouts/scripts
